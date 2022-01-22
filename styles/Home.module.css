@@ -123,3 +123,17 @@
   display: block;
   margin: 0 auto;
 }
+
+.arrum {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.avatar__wrapper {
+  margin: 0 auto;
+}
+.avatar__wrapper img {
+  display: block;
+  border-radius: 50%;
+}
