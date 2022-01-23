@@ -18,3 +18,49 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer base {
+  @font-face {
+    font-family: 'Poppins', serif;
+    font-display: swap;
+    src: local('Poppins'), url(/fonts/Poppins.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Tangerine', cursive;
+    font-display: swap;
+    src: local('Tangerine'), url(/fonts/Tangerine.woff2) format('woff2');
+  }
+
+  .font-tangerine {
+    font-family: 'Tangerine', cursive;
+  }
+
+  .font-primary {
+    font-family: 'Poppins', serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    color: #323947;
+  }
+
+  h1,
+  .h1 {
+    @apply font-tangerine;
+  }
+
+  p,
+  .p {
+    @apply font-primary;
+  }
+
+  h3,
+  .h3 {
+    @apply font-tangerine;
+  }
+
+  h5 {
+    color: #121212;
+    font-family: 'Poppins', serif;
+  }
+}

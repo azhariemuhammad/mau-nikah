@@ -4,10 +4,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontFamily: {
-      tangerine: ['Tangerine', 'cursive'],
-      gentium: ['Gentium Basic', 'serif'],
-    },
     extend: {},
   },
   plugins: [],

@@ -13,28 +13,6 @@ import styles from '../styles/Home.module.css';
 const Invitation: NextPage = () => {
   return (
     <>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Gentium+Basic&family=Tangerine&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <div className={styles.container}>
         <main>
           <div className="mb-8">
@@ -46,10 +24,8 @@ const Invitation: NextPage = () => {
             />
             <div className="relative">
               <div className="grid place-content-center h-screen">
-                <h3 className="text-3xl text-center font-gentium ">
-                  Undangan Pernikahan
-                </h3>
-                <h1 className="text-7xl text-white text-center font-tangerine">
+                <h3 className="text-3xl text-center">Undangan Pernikahan</h3>
+                <h1 className="text-7xl text-white text-center">
                   Fira &amp; Alif
                 </h1>
                 <h5 className="text-center text-white">
@@ -113,29 +89,29 @@ const Invitation: NextPage = () => {
             <div className={`py-8 ${styles.arrum}`}>
               <Image src={arrum1} alt="surat ar rum" />
             </div>
-            <h4 className="pb-8">
+            <p className="pb-8">
               Dan di antara tanda-tanda kekuasaan-Nya lah Dia menciptakan
               untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung
               dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa
               kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar
               terdapat tanda-tanda bagi kaum yang berfikir.
-            </h4>
+            </p>
           </div>
 
           <div id="schedule" className="text-center py-8">
-            <h3>Acara</h3>
+            <h3 className="text-5xl">Acara</h3>
             <div className="py-5">
-              <h5>AKAD NIKAH</h5>
+              <h5 className="font-bold">AKAD NIKAH</h5>
               <p>15 Januari 2022</p>
               <p>09.00 - 10.00</p>
             </div>
             <div className="py-5">
-              <h5>RESEPSI</h5>
+              <h5 className="font-bold">RESEPSI</h5>
               <p>15 Januari 2022</p>
               <p>11.00 - Selesai</p>
             </div>
             <div className="py-5">
-              <h5>KEDIAMAN MEMPELAI WANITA</h5>
+              <h5 className="font-bold">KEDIAMAN MEMPELAI WANITA</h5>
               <p>
                 Juanda, Jalan Gotong Royong RT 04 RW 14 No.65-Komplek H. Amir
                 Cisalak, Sukmajaya Depok - Jawa Barat{' '}
@@ -150,13 +126,12 @@ const Invitation: NextPage = () => {
 
           <div className="mx-[-30px] px-[2rem] text-center bg-[#818cf8]">
             <div className="py-5">
-              <h3>Turut Mengundang</h3>
+              <h3 className="text-5xl mb-8">Turut Mengundang</h3>
               <h5>KELUARGA MEMPELAI LAKI-LAKI</h5>
               <p>Keluarga besar Alm. H Sayid Muchsin Alhamid</p>
               <p>Keluarga besar Polpoke</p>
             </div>
             <div className="py-5">
-              <h3>Turut Mengundang</h3>
               <h5>KELUARGA MEMPELAI PEREMPUAN</h5>
               <p>Keluarga besar Alm. H Sayid Muchsin Alhamid</p>
               <p>Keluarga besar Polpoke</p>
