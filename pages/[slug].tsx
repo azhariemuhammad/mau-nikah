@@ -10,10 +10,11 @@ import avatar1 from '../public/images/avatar-1.jpg';
 import avatar2 from '../public/images/avatar2.jpg';
 import styles from '../styles/Home.module.css';
 import { Carousel, Slide } from '../components/Carousel';
+import CountdownTimer from '../components/CountdownTimer';
 
 const Invitation: NextPage = () => {
   return (
-    <div className="bg-[#FADAD1]">
+    <div className="bg-[#F5F5EF]">
       <div className={styles.container}>
         <main>
           <div className="mb-8">
@@ -23,17 +24,22 @@ const Invitation: NextPage = () => {
               layout="fill"
               objectFit="cover"
             />
-            <div className="relative">
+            <div className="relative mx-[-30px]">
               <div className={styles.background__flower}>
                 <div className="grid place-content-center h-screen">
-                  <h3 className="text-3xl text-center">Undangan Pernikahan</h3>
-                  <h1 className="text-7xl text-white text-center mt-2">
+                  <h1 className="text-5xl text-white text-center mt-5">
                     Musliha
                   </h1>
-                  <h1 className="text-7xl text-white text-center">&amp;</h1>
-                  <h1 className="text-7xl text-white text-center mb-8">
-                    Afwan
-                  </h1>
+                  <h1 className="text-5xl text-white text-center">&amp;</h1>
+                  <h1 className="text-5xl text-white text-center">Afwan</h1>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <h3 className="text-3xl text-center mt-9">
+                    Undangan Pernikahan
+                  </h3>
                   <h5 className="text-center text-white">
                     Sabtu, 12 Februari 2022
                   </h5>
@@ -116,6 +122,9 @@ const Invitation: NextPage = () => {
               <h5 className="font-bold">RESEPSI</h5>
               <p>15 Januari 2022</p>
               <p>11.00 - Selesai</p>
+            </div>
+            <div className="py-5">
+              <CountdownTimer />
             </div>
             <div className="py-5">
               <h5 className="font-bold">KEDIAMAN MEMPELAI WANITA</h5>
