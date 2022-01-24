@@ -9,10 +9,11 @@ import avatar from '../public/images/avatar.jpg';
 import avatar1 from '../public/images/avatar-1.jpg';
 import avatar2 from '../public/images/avatar2.jpg';
 import styles from '../styles/Home.module.css';
+import { Carousel, Slide } from '../components/Carousel';
 
 const Invitation: NextPage = () => {
   return (
-    <>
+    <div className="bg-[#FADAD1]">
       <div className={styles.container}>
         <main>
           <div className="mb-8">
@@ -23,14 +24,20 @@ const Invitation: NextPage = () => {
               objectFit="cover"
             />
             <div className="relative">
-              <div className="grid place-content-center h-screen">
-                <h3 className="text-3xl text-center">Undangan Pernikahan</h3>
-                <h1 className="text-7xl text-white text-center">
-                  Fira &amp; Alif
-                </h1>
-                <h5 className="text-center text-white">
-                  Sabtu, 15 Januari 2022
-                </h5>
+              <div className={styles.background__flower}>
+                <div className="grid place-content-center h-screen">
+                  <h3 className="text-3xl text-center">Undangan Pernikahan</h3>
+                  <h1 className="text-7xl text-white text-center mt-2">
+                    Musliha
+                  </h1>
+                  <h1 className="text-7xl text-white text-center">&amp;</h1>
+                  <h1 className="text-7xl text-white text-center mb-8">
+                    Afwan
+                  </h1>
+                  <h5 className="text-center text-white">
+                    Sabtu, 12 Februari 2022
+                  </h5>
+                </div>
               </div>
             </div>
           </div>
@@ -85,7 +92,7 @@ const Invitation: NextPage = () => {
             </div>
           </div>
 
-          <div className="mx-[-30px] px-[2rem] text-center bg-[#818cf8]">
+          <div className="mx-[-30px] px-[2rem] text-center bg-[#FEECE9]">
             <div className={`py-8 ${styles.arrum}`}>
               <Image src={arrum1} alt="surat ar rum" />
             </div>
@@ -124,7 +131,7 @@ const Invitation: NextPage = () => {
             </div>
           </div>
 
-          <div className="mx-[-30px] px-[2rem] text-center bg-[#818cf8]">
+          <div className="mx-[-30px] px-[2rem] text-center bg-[#FEECE9]">
             <div className="py-5">
               <h3 className="text-5xl mb-8">Turut Mengundang</h3>
               <h5>KELUARGA MEMPELAI LAKI-LAKI</h5>
@@ -140,7 +147,7 @@ const Invitation: NextPage = () => {
           <br />
           <br />
 
-          <div className="grid grid-flow-row grid-cols-2 gap-8 mt-[40px]">
+          {/* <div className="grid grid-flow-row grid-cols-2 gap-8 mt-[40px]">
             <div className="transform scale-110 -rotate-6">
               <Image src={wedding} alt="avatar" />
             </div>
@@ -153,10 +160,22 @@ const Invitation: NextPage = () => {
             <div className="transform scale-110 -rotate-6">
               <Image src={wedding} alt="avatar" />
             </div>
-          </div>
+          </div> */}
+
+          <Carousel options={{ autoplay: 2000 }}>
+            <Slide>
+              <Image src={wedding} alt="avatar" />
+            </Slide>
+            <Slide>
+              <Image src={avatar1} alt="avatar" />
+            </Slide>
+            <Slide>
+              <Image src={avatar} alt="avatar" />
+            </Slide>
+          </Carousel>
         </main>
       </div>
-    </>
+    </div>
   );
 };
 

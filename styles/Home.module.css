@@ -138,3 +138,8 @@
   display: block;
   border-radius: 50%;
 }
+
+.background__flower {
+  background-image: url('../public/images/frame.png');
+  background-repeat: no-repeat;
+}
