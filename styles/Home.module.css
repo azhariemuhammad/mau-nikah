@@ -1,8 +1,9 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 2rem 5rem 2rem;
 }
 
 .main {
+  margin: 0 auto;
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -146,6 +147,11 @@
   background-position-y: 36%;
 }
 
+.shadow__custom {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  padding: 16px;
+  border-radius: 10px;
+}
 .timer {
   height: 80px;
   background-color: red;
