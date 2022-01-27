@@ -36,7 +36,7 @@ const Invitation: NextPage = () => {
 
   return (
     <>
-      <div className="bg-[#F5F5EF]">
+      <div className="bg-[#fff]">
         <div className={styles.container}>
           <main>
             <div className="mb-8">
@@ -49,17 +49,24 @@ const Invitation: NextPage = () => {
               <div className="relative mx-[-30px]">
                 <div className={styles.background__flower}>
                   <div className="grid place-content-center h-screen">
-                    <h1 className="text-5xl text-white text-center mt-5">
+                    <h1 className="text-8xl font-sacramento text-white text-center mt-5">
                       Musliha
                     </h1>
-                    <h1 className="text-5xl text-white text-center">&amp;</h1>
-                    <h1 className="text-5xl text-white text-center">Afwan</h1>
+                    <h1 className="text-5xl font-sacramento text-white text-center">
+                      &amp;
+                    </h1>
+                    <h1 className="text-5xl font-sacramento text-white text-center">
+                      Afwan
+                    </h1>
                     <br />
                     <br />
                     <br />
                     <br />
                     <br />
-                    <h3 className="text-3xl text-center mt-9">
+                    <h3 className="text-3xl text-center text-pink-800 font-sacramento  mt-9">
+                      Undangan Pernikahan
+                    </h3>
+                    <h3 className="text-3xl text-center   mt-9">
                       Undangan Pernikahan
                     </h3>
                     <h5 className="text-center text-white">
@@ -91,9 +98,9 @@ const Invitation: NextPage = () => {
                   <Image src={avatar} width={256} height={256} />
                 </div>
                 <div className="my-8">
-                  <i>Putri Ancona</i>
-                  <p>Bapak M. Nur Marassabey</p>
-                  <p>Ibu Halija bin Wael</p>
+                  <i className="text-lg font-bold">Putri Ancona</i>
+                  <p className="text-md">Bapak M. Nur Marassabey</p>
+                  <p className="text-md">Ibu Halija bin Wael</p>
                 </div>
               </div>
               <div id="couple-2">
@@ -103,9 +110,9 @@ const Invitation: NextPage = () => {
                   <Image src={avatar1} width={256} height={256} />
                 </div>
                 <div className="my-8">
-                  <i>Syamsudin</i>
-                  <p>Bapak M. Nur Marassabey</p>
-                  <p>Ibu Halija bin Wael</p>
+                  <i className="text-lg font-bold">Syamsudin</i>
+                  <p className="text-md">Bapak M. Nur Marassabey</p>
+                  <p className="text-md">Ibu Halija bin Wael</p>
                 </div>
               </div>
               <div className="my-8">
@@ -121,10 +128,7 @@ const Invitation: NextPage = () => {
               </div>
             </div>
 
-            <div className="mx-[-30px] px-[2rem] text-center bg-[#FEECE9]">
-              <div className={`py-8 ${styles.arrum}`}>
-                <Image src={arrum1} alt="surat ar rum" />
-              </div>
+            <div className="mx-[-30px] p-[2rem]  text-center bg-[#FEECE9]">
               <p className="pb-8">
                 Dan di antara tanda-tanda kekuasaan-Nya lah Dia menciptakan
                 untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung
@@ -132,10 +136,11 @@ const Invitation: NextPage = () => {
                 kasih dan sayang. Sesungguhnya pada yang demikian itu
                 benar-benar terdapat tanda-tanda bagi kaum yang berfikir.
               </p>
+              <p>Surat Ar-Rum Ayat 21</p>
             </div>
 
             <div id="schedule" className="text-center py-8">
-              <h3 className="text-5xl">Acara</h3>
+              <h3 className="text-5xl text-pink-800 font-sacramento">Acara</h3>
               <div className="py-5">
                 <h5 className="font-bold">AKAD NIKAH</h5>
                 <p>15 Januari 2022</p>
@@ -165,7 +170,9 @@ const Invitation: NextPage = () => {
 
             <div className="mx-[-30px] px-[2rem] text-center bg-[#FEECE9]">
               <div className="py-5">
-                <h3 className="text-5xl mb-8">Turut Mengundang</h3>
+                <h3 className="text-5xl mb-8 text-pink-800 font-sacramento">
+                  Turut Mengundang
+                </h3>
                 <h5>KELUARGA MEMPELAI LAKI-LAKI</h5>
                 <p>Keluarga besar Alm. H Sayid Muchsin Alhamid</p>
                 <p>Keluarga besar Polpoke</p>
@@ -180,7 +187,9 @@ const Invitation: NextPage = () => {
             <br />
 
             <div className="text-center">
-              <h3 className="text-5xl mb-8 pt-5">Gallery</h3>
+              <h3 className="text-5xl mb-8 pt-5 text-pink-800 font-sacramento">
+                Gallery
+              </h3>
 
               <Carousel options={{ autoplay: 2000 }}>
                 <Slide>
@@ -197,7 +206,9 @@ const Invitation: NextPage = () => {
 
             <div id="tanda-kasih" className="mt-4 text-center">
               <div className={styles.shadow__custom}>
-                <h3 className="text-5xl mb-8 pt-5">Tanda Kasih</h3>
+                <h3 className="text-5xl mb-8 pt-5 text-pink-800 font-sacramento">
+                  Tanda Kasih
+                </h3>
                 <p>
                   Kehadiran dan doa anda adalah hadiah terbaik untuk kami. Namun
                   jika memberi adalah suatu bentuk tanda kasih bagi anda, tombol

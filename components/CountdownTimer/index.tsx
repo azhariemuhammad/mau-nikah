@@ -15,7 +15,7 @@ const CountdownTimer = () => {
 
   return (
     <ul className="flex justify-center">
-      <li className={`${styles.timer} ${styles.breath}`}>
+      <li className={` bg-pink-400 ${styles.timer} ${styles.breath}`}>
         <p className="text-2xl text-white">{timeLeft.days}</p>
         <p className="text-sm">Hari</p>
       </li>
