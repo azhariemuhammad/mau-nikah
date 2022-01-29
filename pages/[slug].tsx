@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
 
 import wedding from '../public/images/wedding-1.jpg';
 import basmallah from '../public/images/basmallah.png';
-import arrum1 from '../public/images/arrum1.png';
 import avatar from '../public/images/avatar.jpg';
 import avatar1 from '../public/images/avatar-1.jpg';
 import qrcode from '../public/images/qrcode.jpeg';

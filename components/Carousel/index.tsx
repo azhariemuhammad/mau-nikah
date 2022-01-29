@@ -41,7 +41,7 @@ export const Carousel = forwardRef<
   );
 });
 
-export const Slide = forwardRef<HTMLInputElement, PropsWithChildren<{}>>(
+export const Slide = forwardRef<HTMLInputElement, PropsWithChildren<unknown>>(
   ({ children }, ref) => {
     return (
       // TODO:
