@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import styles from './welcome.module.css';
 
 interface WelcomePage {
@@ -10,6 +12,11 @@ const WelcomePage = ({
   isOpen,
   handleOpenInvitation,
 }: WelcomePage) => {
+  const {
+    query: { to = '' },
+  } = useRouter();
+
+  const guest = to || '';
   return (
     <div>
       <div
@@ -19,19 +26,25 @@ const WelcomePage = ({
       >
         <div className="mb-8">
           <h5>KEPADA BAPAK/IBU/SAUDARA/I</h5>
-          <h5>{guestName || 'AMI'}</h5>
+          <h5 className="text-bold">{guest}</h5>
           <p>
             Dengan senang hati mengundang Anda untuk hadir di hari pernikahan
             kami
           </p>
 
-          <h1 className="text-5xl text-white text-center mt-5">Musliha</h1>
-          <h1 className="text-5xl text-white text-center">&amp;</h1>
-          <h1 className="text-5xl text-white text-center">Afwan</h1>
+          <h1 className="text-5xl font-bold font-sacramento text-white text-center mt-5">
+            Musliha
+          </h1>
+          <h1 className="text-5xl font-bold font-sacramento text-white text-center">
+            &amp;
+          </h1>
+          <h1 className="text-5xl font-bold font-sacramento text-white text-center">
+            Afwan
+          </h1>
         </div>
         <div className="mt-8">
           <button
-            className="rounded-full bg-orange-600 h-[32px] w-[170px]"
+            className="rounded-full bg-rose-800 text-white h-[32px] w-[170px]"
             onClick={handleOpenInvitation}
           >
             Buka Undangan

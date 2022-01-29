@@ -36,7 +36,7 @@ const Invitation: NextPage = () => {
 
   return (
     <>
-      <div className="bg-[#fff]">
+      <div className="bg-[#fff] max-w-[640px] m-auto">
         <div className={styles.container}>
           <main>
             <div className="mb-8">
@@ -64,11 +64,11 @@ const Invitation: NextPage = () => {
                     <br />
                     <br />
                     <div className="mt-8">
-                      <h3 className="text-3xl text-center text-pink-800 font-sacramento  mt-9">
+                      <h3 className="text-3xl font-bold text-center text-pink-800 font-sacramento  mt-9">
                         Undangan Pernikahan
                       </h3>
 
-                      <h5 className="text-center text-white">
+                      <h5 className="text-center font-bold text-white">
                         Sabtu, 12 Februari 2022
                       </h5>
                     </div>
@@ -80,7 +80,7 @@ const Invitation: NextPage = () => {
               <div className={styles.basmallah}>
                 <Image src={basmallah} alt="basmallah" />
               </div>
-              <p>Assalamu'alaikum Wr. Wb.</p>
+              <p>Assalamu&apos;alaikum Wr. Wb.</p>
 
               <br />
               <p>
@@ -101,6 +101,7 @@ const Invitation: NextPage = () => {
                   <i className="text-4xl text-pink-800 font-bold font-tangerine">
                     Putri Ancona
                   </i>
+                  <p className="text-sm">Putri tercinta</p>
                   <p className="text-md">Bapak M. Nur Marassabey</p>
                   <p className="text-md">Ibu Halija bin Wael</p>
                 </div>
@@ -115,6 +116,7 @@ const Invitation: NextPage = () => {
                   <i className="text-4xl font-bold font-tangerine text-pink-800">
                     Syamsudin
                   </i>
+                  <p className="text-sm">Putra tercinta</p>
                   <p className="text-md">Bapak M. Nur Marassabey</p>
                   <p className="text-md">Ibu Halija bin Wael</p>
                 </div>
@@ -122,6 +124,9 @@ const Invitation: NextPage = () => {
               <div className="my-8">
                 <p>Sabtu</p>
                 <p>15 Januari 2022</p>
+              </div>
+              <div className="py-5">
+                <CountdownTimer />
               </div>
               <div className="my-8">
                 <p>
@@ -133,40 +138,39 @@ const Invitation: NextPage = () => {
             </div>
 
             <div className="mx-[-30px] p-[2rem]  text-center bg-[#FEECE9]">
-              <p className="pb-8">
+              <p className="pb-8 text-sm">
                 Dan di antara tanda-tanda kekuasaan-Nya lah Dia menciptakan
                 untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung
                 dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa
                 kasih dan sayang. Sesungguhnya pada yang demikian itu
                 benar-benar terdapat tanda-tanda bagi kaum yang berfikir.
               </p>
-              <p>Surat Ar-Rum Ayat 21</p>
+              <p className="text-sm text-bold">Surat Ar-Rum Ayat 21</p>
             </div>
 
             <div id="schedule" className="text-center py-8">
               <h3 className="text-5xl text-pink-800 font-sacramento">Acara</h3>
               <div className="py-5">
-                <h5 className="font-bold text-rose-400">AKAD NIKAH</h5>
+                <h5 className="font-bold text-pink-800">AKAD NIKAH</h5>
                 <p>15 Januari 2022</p>
                 <p>09.00 - 10.00</p>
               </div>
               <div className="py-5">
-                <h5 className="font-bold text-rose-400">RESEPSI</h5>
+                <h5 className="font-bold text-pink-800">RESEPSI</h5>
                 <p>15 Januari 2022</p>
                 <p>11.00 - Selesai</p>
               </div>
               <div className="py-5">
-                <CountdownTimer />
-              </div>
-              <div className="py-5">
-                <h5 className="font-bold">KEDIAMAN MEMPELAI WANITA</h5>
+                <h5 className="font-bold text-pink-800">
+                  KEDIAMAN MEMPELAI WANITA
+                </h5>
                 <p>
                   Juanda, Jalan Gotong Royong RT 04 RW 14 No.65-Komplek H. Amir
                   Cisalak, Sukmajaya Depok - Jawa Barat{' '}
                 </p>
               </div>
               <div>
-                <button className="bg-blue-500 rounded text-white font-bold py-2 px-4  hover:bg-blue-700">
+                <button className="bg-rose-800 rounded text-white font-bold py-2 px-4  hover:bg-rose-700">
                   Lihat Lokasi
                 </button>
               </div>
@@ -222,7 +226,7 @@ const Invitation: NextPage = () => {
                 <br />
                 <p>Wassalamualaikum Warahmatullahi Wabarakatuh.</p>
               </div>
-              <div className="mt-4">
+              <div className="mt-8">
                 <Image src={qrcode} />
               </div>
             </div>
