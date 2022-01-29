@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import { motion, Variants } from 'framer-motion';
 
 import wedding from '@/public/images/wedding-1.jpg';
 import basmallah from '@/public/images/basmallah.png';
 import avatar from '@/public/images/avatar.jpg';
+import divider from '@/public/icons/divider.svg';
 import avatar1 from '@/public/images/avatar-1.jpg';
 import qrcode from '@/public/images/qrcode.jpeg';
 import styles from '@/styles/Home.module.css';
@@ -31,6 +33,22 @@ const Invitation: NextPage = () => {
       />
     );
   }
+
+  const cardVariants: Variants = {
+    offscreen: {
+      x: 1000,
+    },
+    onscreen: {
+      x: 0,
+      rotate: -10,
+      transition: { duration: 1, type: 'tween' },
+      // transition: {
+      //   type: 'spring',
+      //   bounce: 0.4,
+      //   duration: 0.8,
+      // },
+    },
+  };
 
   return (
     <>
@@ -92,11 +110,19 @@ const Invitation: NextPage = () => {
 
             <div className="my-8 flex flex-col text-center">
               <div id="couple-1">
-                <div
-                  className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
+                <motion.div
+                  className="card-container overflow-hidden relative"
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.8 }}
                 >
-                  <Image src={avatar} width={256} height={256} />
-                </div>
+                  <motion.div
+                    variants={cardVariants}
+                    className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
+                  >
+                    <Image src={avatar} width={256} height={256} />
+                  </motion.div>
+                </motion.div>
                 <div className="my-8">
                   <i className="text-4xl text-pink-800 font-bold font-tangerine">
                     Putri Ancona
@@ -107,11 +133,19 @@ const Invitation: NextPage = () => {
                 </div>
               </div>
               <div id="couple-2">
-                <div
-                  className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
+                <motion.div
+                  className="card-container overflow-hidden relative"
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.8 }}
                 >
-                  <Image src={avatar1} width={256} height={256} />
-                </div>
+                  <motion.div
+                    variants={cardVariants}
+                    className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
+                  >
+                    <Image src={avatar1} width={256} height={256} />
+                  </motion.div>
+                </motion.div>
                 <div className="my-8">
                   <i className="text-4xl font-bold font-tangerine text-pink-800">
                     Syamsudin
@@ -122,8 +156,11 @@ const Invitation: NextPage = () => {
                 </div>
               </div>
               <div className="my-8">
-                <p>Sabtu</p>
-                <p>15 Januari 2022</p>
+                <Image width={200} height={100} src={divider} />
+                <p className="text-2xl mt-2 text-pink-800 font-bold">Sabtu</p>
+                <p className="text-1xl text-pink-800 font-bold">
+                  15 Januari 2022
+                </p>
               </div>
               <div className="py-5">
                 <CountdownTimer />
@@ -145,7 +182,7 @@ const Invitation: NextPage = () => {
                 kasih dan sayang. Sesungguhnya pada yang demikian itu
                 benar-benar terdapat tanda-tanda bagi kaum yang berfikir.
               </p>
-              <p className="text-sm text-bold">Surat Ar-Rum Ayat 21</p>
+              <p className="text-sm text-bold">QS Ar-Rum:21</p>
             </div>
 
             <div id="schedule" className="text-center py-8">
