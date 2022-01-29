@@ -9,6 +9,7 @@ import avatar from '../public/images/avatar.jpg';
 import avatar1 from '../public/images/avatar-1.jpg';
 import qrcode from '../public/images/qrcode.jpeg';
 import styles from '../styles/Home.module.css';
+import MetaHeadComponent from '../components/MetaHead';
 import { Carousel, Slide } from '../components/Carousel';
 import CountdownTimer from '../components/CountdownTimer';
 import WelcomePage from '../components/WelcomePage';
@@ -35,26 +36,7 @@ const Invitation: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Create Next App</title>
-        <meta
-          property="og:image"
-          content="https://grinvitation.com/00.asset/images/firaalifday/background_desktop_2962_10-27-55.jpg"
-        />
-        <meta
-          property="og:title"
-          content="Undangan Pernikahan Musliha &amp; Afwan"
-        />
-        <meta
-          property="og:description"
-          content="Kediaman Mempelai Wanita | 15 Januari 2022"
-        />
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://nikahhariini.vercel.app/muslihaafwan"
-        ></meta>
-      </Head>
+      <MetaHeadComponent />
 
       <div className="bg-[#fff] max-w-[640px] m-auto">
         <div className={styles.container}>
