@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 
 import wedding from '../public/images/wedding-1.jpg';
@@ -34,6 +35,27 @@ const Invitation: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Create Next App</title>
+        <meta
+          property="og:image"
+          content="https://grinvitation.com/00.asset/images/firaalifday/background_desktop_2962_10-27-55.jpg"
+        />
+        <meta
+          property="og:title"
+          content="Undangan Pernikahan Musliha &amp; Afwan"
+        />
+        <meta
+          property="og:description"
+          content="Kediaman Mempelai Wanita | 15 Januari 2022"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://nikahhariini.vercel.app/muslihaafwan"
+        ></meta>
+      </Head>
+
       <div className="bg-[#fff] max-w-[640px] m-auto">
         <div className={styles.container}>
           <main>
