@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 import styles from '../../styles/Home.module.css';
 import calculateTimeLeft from '../../helpers/calculateTimer';
 
-const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+interface CountDownTimerProps {
+  eventDate: string;
+}
+const CountdownTimer = ({ eventDate }: CountDownTimerProps) => {
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(eventDate));
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeLeft(calculateTimeLeft(eventDate));
     }, 1000);
 
     return () => clearTimeout(timer);
-  });
+  }, [eventDate]);
 
   return (
     <ul className="flex justify-center">

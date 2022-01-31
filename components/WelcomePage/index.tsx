@@ -31,7 +31,7 @@ const WelcomePage = ({ isOpen, handleOpenInvitation }: WelcomePage) => {
             </p>
 
             <h1 className="text-5xl font-bold font-sacramento text-white text-center mt-5">
-              Musliha
+              Fatma
             </h1>
             <h1 className="text-5xl font-bold font-sacramento text-white text-center">
               &amp;

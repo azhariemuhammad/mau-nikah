@@ -1,8 +1,9 @@
 .loading__heart {
   fill: transparent;
-  stroke: #8eaeba;
-  stroke-width: 11;
+  stroke: rgb(159 18 57);
+  stroke-width: 7;
   text-align: center;
+  margin: 0 auto;
 }
 
 .loading__heart path {
@@ -10,6 +11,7 @@
   stroke-dasharray: 1550;
   transform-origin: center;
   animation: stroke-animation 3s ease-in-out infinite forwards;
+  /* fill: rgb(159 18 57); */
 }
 
 @keyframes stroke-animation {

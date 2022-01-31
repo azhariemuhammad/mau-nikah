@@ -14,6 +14,7 @@ import MetaHeadComponent from '@/components/MetaHead';
 import { Carousel, Slide } from '@/components/Carousel';
 import CountdownTimer from '@/components/CountdownTimer';
 import WelcomePage from '@/components/WelcomePage';
+import LoaderLove from '@/components/Loader';
 
 const Invitation: NextPage = () => {
   const [hasOpen, setHasOpen] = useState(false);
@@ -50,6 +51,8 @@ const Invitation: NextPage = () => {
     },
   };
 
+  const eventDate = '02/12/2022';
+
   return (
     <>
       <MetaHeadComponent />
@@ -57,10 +60,10 @@ const Invitation: NextPage = () => {
       <div className="bg-[#fff] max-w-[640px] m-auto">
         <div className={styles.container}>
           <main>
-            <div className="mb-8">
+            <div className="mb-8 bg-red">
               <Image
                 alt="Mountains"
-                src={wedding}
+                src="https://user-images.githubusercontent.com/19600009/151794364-6dfcbf7b-d374-46da-9bf7-d078a4d6e3e1.jpg"
                 layout="fill"
                 objectFit="cover"
               />
@@ -68,7 +71,7 @@ const Invitation: NextPage = () => {
                 <div className={styles.background__flower}>
                   <div className="grid place-content-center h-screen">
                     <h1 className="text-5xl font-bold font-sacramento text-white text-center mt-5">
-                      Musliha
+                      Fatma
                     </h1>
                     <h1 className="text-5xl font-bold font-sacramento text-white text-center">
                       &amp;
@@ -110,7 +113,7 @@ const Invitation: NextPage = () => {
 
             <div className="my-8 flex flex-col text-center">
               <div id="couple-1">
-                <motion.div
+                {/* <motion.div
                   className="card-container overflow-hidden relative"
                   initial="offscreen"
                   whileInView="onscreen"
@@ -122,48 +125,51 @@ const Invitation: NextPage = () => {
                   >
                     <Image src={avatar} width={256} height={256} />
                   </motion.div>
-                </motion.div>
+                </motion.div> */}
                 <div className="my-8">
                   <i className="text-4xl text-pink-800 font-bold font-tangerine">
-                    Putri Ancona
+                    Musliha Fatma Sanaky S.Pd
                   </i>
                   <p className="text-sm">Putri tercinta</p>
-                  <p className="text-md">Bapak M. Nur Marassabey</p>
-                  <p className="text-md">Ibu Halija bin Wael</p>
+                  <p className="text-md">Bapak Abdul basir Sanaky</p>
+                  <p className="text-md">Ibu Hayati Pelupessy</p>
                 </div>
               </div>
+              {/* <h3 className="text-5xl font-bold text-pink-800">
+
+              </h3> */}
+              <LoaderLove />
               <div id="couple-2">
-                <motion.div
+                {/* <motion.div
                   className="card-container overflow-hidden relative"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.8 }}
                 >
-                  <motion.div
-                    variants={cardVariants}
-                    className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
-                  >
-                    <Image src={avatar1} width={256} height={256} />
+                  <motion.div variants={cardVariants} className={`w-full`}>
+                    
                   </motion.div>
-                </motion.div>
+                </motion.div> */}
                 <div className="my-8">
                   <i className="text-4xl font-bold font-tangerine text-pink-800">
-                    Syamsudin
+                    Afwan Ryan M Ely A.Md AK
                   </i>
                   <p className="text-sm">Putra tercinta</p>
-                  <p className="text-md">Bapak M. Nur Marassabey</p>
-                  <p className="text-md">Ibu Halija bin Wael</p>
+                  <p className="text-md">Bapak Jakaria Ely</p>
+                  <p className="text-md">Ibu Mujna Ollong</p>
                 </div>
               </div>
               <div className="my-8">
                 <Image width={200} height={100} src={divider} />
                 <p className="text-2xl mt-2 text-pink-800 font-bold">Sabtu</p>
                 <p className="text-1xl text-pink-800 font-bold">
-                  15 Januari 2022
+                  12 Februari 2022
                 </p>
               </div>
               <div className="py-5">
-                <CountdownTimer />
+                {+new Date(eventDate) > +new Date() && (
+                  <CountdownTimer eventDate={eventDate} />
+                )}
               </div>
               <div className="my-8">
                 <p>
@@ -189,27 +195,27 @@ const Invitation: NextPage = () => {
               <h3 className="text-5xl text-pink-800 font-sacramento">Acara</h3>
               <div className="py-5">
                 <h5 className="font-bold text-pink-800">AKAD NIKAH</h5>
-                <p>15 Januari 2022</p>
+                <p>12 Februari 2022</p>
                 <p>09.00 - 10.00</p>
               </div>
               <div className="py-5">
                 <h5 className="font-bold text-pink-800">RESEPSI</h5>
-                <p>15 Januari 2022</p>
+                <p>12 Februari 2022</p>
                 <p>11.00 - Selesai</p>
               </div>
               <div className="py-5">
                 <h5 className="font-bold text-pink-800">
-                  KEDIAMAN MEMPELAI WANITA
+                  KEDIAMAN MEMPELAI PRIA
                 </h5>
-                <p>
-                  Juanda, Jalan Gotong Royong RT 04 RW 14 No.65-Komplek H. Amir
-                  Cisalak, Sukmajaya Depok - Jawa Barat{' '}
-                </p>
+                <p>Desa Hila</p>
               </div>
               <div>
-                <button className="bg-rose-800 rounded text-white font-bold py-2 px-4  hover:bg-rose-700">
+                <a
+                  href="https://maps.app.goo.gl/v9qr4x1G6hLWCoVB8"
+                  className="btn bg-rose-800 rounded text-white font-bold py-2 px-4  hover:bg-rose-700"
+                >
                   Lihat Lokasi
-                </button>
+                </a>
               </div>
             </div>
 
@@ -219,13 +225,11 @@ const Invitation: NextPage = () => {
                   Turut Mengundang
                 </h3>
                 <h5>KELUARGA MEMPELAI LAKI-LAKI</h5>
-                <p>Keluarga besar Alm. H Sayid Muchsin Alhamid</p>
-                <p>Keluarga besar Polpoke</p>
+                <p>Bpk Jakaria Ely dan istri Mujna ollong</p>
               </div>
               <div className="py-5">
                 <h5>KELUARGA MEMPELAI PEREMPUAN</h5>
-                <p>Keluarga besar Alm. H Sayid Muchsin Alhamid</p>
-                <p>Keluarga besar Polpoke</p>
+                <p>Bpk Abdul basir Sanaky dan Istri Hayati Pelupessy</p>
               </div>
             </div>
             <br />
@@ -238,18 +242,36 @@ const Invitation: NextPage = () => {
 
               <Carousel options={{ autoplay: 2000 }}>
                 <Slide>
-                  <Image src={wedding} alt="avatar" />
+                  <Image
+                    src="https://user-images.githubusercontent.com/19600009/151729257-580369ee-d3f2-4bfc-a98d-28f26600654f.jpg"
+                    alt="avatar"
+                    layout="responsive"
+                    width={100}
+                    height={100}
+                  />
                 </Slide>
                 <Slide>
-                  <Image src={avatar1} alt="avatar" />
+                  <Image
+                    src="https://user-images.githubusercontent.com/19600009/151794472-13fa3c1c-f856-4daf-81db-051c90c36af5.jpg"
+                    alt="avatar"
+                    layout="responsive"
+                    width={100}
+                    height={100}
+                  />
                 </Slide>
                 <Slide>
-                  <Image src={avatar} alt="avatar" />
+                  <Image
+                    src="https://user-images.githubusercontent.com/19600009/151794330-e881a4a1-6244-4db9-9cec-553138512eba.jpg"
+                    alt="avatar"
+                    layout="responsive"
+                    width={100}
+                    height={100}
+                  />
                 </Slide>
               </Carousel>
             </div>
 
-            <div id="tanda-kasih" className="mt-4 text-center">
+            {/* <div id="tanda-kasih" className="mt-4 text-center">
               <div className={styles.shadow__custom}>
                 <h3 className="text-5xl mb-8 pt-5 text-pink-800 font-sacramento">
                   Tanda Kasih
@@ -266,7 +288,7 @@ const Invitation: NextPage = () => {
               <div className="mt-8">
                 <Image src={qrcode} />
               </div>
-            </div>
+            </div> */}
           </main>
         </div>
       </div>
