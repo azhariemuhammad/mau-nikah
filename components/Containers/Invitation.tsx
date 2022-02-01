@@ -81,14 +81,14 @@ const Invitation: NextPage = () => {
                     </h1>
 
                     <div className="relative mt-8 bottom-[-60%]">
-                      <h3 className="text-3xl font-bold text-center text-pink-800 font-sacramento  mt-9">
+                      <h3 className="text-3xl font-bold text-center text-pink-800 font-sacramento">
                         Undangan Pernikahan
                       </h3>
 
                       <h5 className="text-center mt-1 text-2xl font-bold text-white">
                         Sabtu, 12 Februari 2022
                       </h5>
-                      <div className="flex">
+                      <div className="flex justify-center">
                         <div className={styles.icon__arrows}>
                           <span></span>
                         </div>
