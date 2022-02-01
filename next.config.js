@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     domains: ['user-images.githubusercontent.com'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/afwanfatma',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

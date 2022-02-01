@@ -24,7 +24,7 @@ const Invitation: NextPage = () => {
     setOpenModal(true);
     setTimeout(() => {
       setHasOpen(true);
-    }, 600);
+    }, 550);
   };
   if (!hasOpen) {
     return (
@@ -63,7 +63,7 @@ const Invitation: NextPage = () => {
             <div className="mb-8 bg-red">
               <Image
                 alt="Mountains"
-                src="https://user-images.githubusercontent.com/19600009/151910478-d68f252f-f095-4496-9995-e717fc77e092.jpg"
+                src="https://user-images.githubusercontent.com/19600009/151924036-f7e90cf6-955d-4c07-8a77-a8bb32a00bb3.jpg"
                 layout="fill"
                 objectFit="cover"
               />
@@ -241,6 +241,15 @@ const Invitation: NextPage = () => {
               </h3>
 
               <Carousel options={{ autoplay: 2000 }}>
+                <Slide>
+                  <Image
+                    src="https://user-images.githubusercontent.com/19600009/151929852-57aac81a-0b64-44a6-bfa4-f7f298d6bc77.jpg"
+                    alt="avatar"
+                    layout="responsive"
+                    width={100}
+                    height={100}
+                  />
+                </Slide>
                 <Slide>
                   <Image
                     src="https://user-images.githubusercontent.com/19600009/151729257-580369ee-d3f2-4bfc-a98d-28f26600654f.jpg"
