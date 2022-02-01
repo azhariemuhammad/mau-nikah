@@ -3,7 +3,7 @@ import Head from 'next/head';
 const MetaHeadComponent = () => {
   return (
     <Head>
-      <title>Undangan Pernikahan Musliha &amp; Afwan</title>
+      <title>Undangan Pernikahan Fatma &amp; Afwan</title>
       <meta
         property="og:image"
         content="https://user-images.githubusercontent.com/19600009/151924036-f7e90cf6-955d-4c07-8a77-a8bb32a00bb3.jpg"
