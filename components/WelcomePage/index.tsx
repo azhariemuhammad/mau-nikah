@@ -23,9 +23,9 @@ const WelcomePage = ({ isOpen, handleOpenInvitation }: WelcomePage) => {
           } ${isOpen ? styles.shown : ''}`}
         >
           <div className="mb-8">
-            <h5>KEPADA BAPAK/IBU/SAUDARA/I</h5>
-            <h5 className="text-bold">{guest}</h5>
-            <p>
+            <h5 className="text-white">KEPADA BAPAK/IBU/SAUDARA/I</h5>
+            <h5 className="text-bold text-white">{guest}</h5>
+            <p className="text-white">
               Dengan senang hati mengundang Anda untuk hadir di hari pernikahan
               kami
             </p>

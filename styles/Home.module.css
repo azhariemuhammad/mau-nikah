@@ -176,6 +176,41 @@
   -webkit-animation: breathing 1s ease-out infinite normal;
 }
 
+.icon__arrows {
+  justify-content: center;
+}
+
+.icon__arrows::after,
+.icon__arrows::before {
+  content: '';
+}
+.icon__arrows span,
+.icon__arrows::after,
+.icon__arrows::before {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+  margin: 0 0 0.125em 0.315em;
+  transform: rotate(45deg);
+  animation: mouse-scroll 1s infinite;
+  animation-direction: alternate;
+}
+
+.icon__arrows::before {
+  margin-top: 0.315em;
+  animation-delay: 0.1s;
+}
+
+.icon-scroll span {
+  animation-delay: 0.2s;
+}
+
+.icon__arrows::after {
+  animation-delay: 0.3s;
+}
+
 @keyframes breathing {
   0% {
     -webkit-transform: scale(0.9);
@@ -199,5 +234,17 @@
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
     transform: scale(0.9);
+  }
+}
+
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }

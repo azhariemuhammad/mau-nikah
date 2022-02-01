@@ -5,12 +5,13 @@
 }
 
 .modal {
-  background-image: url('https://user-images.githubusercontent.com/19600009/151794490-f890dfc5-2547-4ec8-9070-fba2f46fdb22.jpg');
+  background-image: url('https://user-images.githubusercontent.com/19600009/151910478-d68f252f-f095-4496-9995-e717fc77e092.jpg');
   background-repeat: no-repeat;
-  /* background: rgba(0, 0, 0, 0);
+  background-size: cover;
+  /* background-color: rgba(0, 0, 0, 0); */
   height: 100%;
-  width: 100%; */
-  /* position: fixed; */
+  width: 100%;
+  position: fixed;
 
   /* top: 0;
   left: 0;

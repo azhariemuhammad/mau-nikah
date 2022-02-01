@@ -63,14 +63,14 @@ const Invitation: NextPage = () => {
             <div className="mb-8 bg-red">
               <Image
                 alt="Mountains"
-                src="https://user-images.githubusercontent.com/19600009/151794364-6dfcbf7b-d374-46da-9bf7-d078a4d6e3e1.jpg"
+                src="https://user-images.githubusercontent.com/19600009/151910478-d68f252f-f095-4496-9995-e717fc77e092.jpg"
                 layout="fill"
                 objectFit="cover"
               />
               <div className="relative mx-[-30px]">
                 <div className={styles.background__flower}>
                   <div className="grid place-content-center h-screen">
-                    <h1 className="text-5xl font-bold font-sacramento text-white text-center mt-5">
+                    <h1 className="text-5xl font-bold font-sacramento text-white text-center mt-7">
                       Fatma
                     </h1>
                     <h1 className="text-5xl font-bold font-sacramento text-white text-center">
@@ -80,18 +80,19 @@ const Invitation: NextPage = () => {
                       Afwan
                     </h1>
 
-                    <br />
-
-                    <br />
-                    <br />
-                    <div className="mt-8">
+                    <div className="relative mt-8 bottom-[-60%]">
                       <h3 className="text-3xl font-bold text-center text-pink-800 font-sacramento  mt-9">
                         Undangan Pernikahan
                       </h3>
 
-                      <h5 className="text-center font-bold text-white">
+                      <h5 className="text-center mt-1 text-2xl font-bold text-white">
                         Sabtu, 12 Februari 2022
                       </h5>
+                      <div className="flex">
+                        <div className={styles.icon__arrows}>
+                          <span></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -127,7 +128,7 @@ const Invitation: NextPage = () => {
                   </motion.div>
                 </motion.div> */}
                 <div className="my-8">
-                  <i className="text-4xl text-pink-800 font-bold font-tangerine">
+                  <i className="text-3xl text-pink-800 font-bold font-tangerine">
                     Musliha Fatma Sanaky S.Pd
                   </i>
                   <p className="text-sm">Putri tercinta</p>
@@ -151,7 +152,7 @@ const Invitation: NextPage = () => {
                   </motion.div>
                 </motion.div> */}
                 <div className="my-8">
-                  <i className="text-4xl font-bold font-tangerine text-pink-800">
+                  <i className="text-3xl font-bold font-tangerine text-pink-800">
                     Afwan Ryan M Ely A.Md AK
                   </i>
                   <p className="text-sm">Putra tercinta</p>
@@ -192,7 +193,7 @@ const Invitation: NextPage = () => {
             </div>
 
             <div id="schedule" className="text-center py-8">
-              <h3 className="text-5xl text-pink-800 font-sacramento">Acara</h3>
+              <h3 className="text-4xl text-pink-800 font-sacramento">Acara</h3>
               <div className="py-5">
                 <h5 className="font-bold text-pink-800">AKAD NIKAH</h5>
                 <p>12 Februari 2022</p>
@@ -204,9 +205,8 @@ const Invitation: NextPage = () => {
                 <p>11.00 - Selesai</p>
               </div>
               <div className="py-5">
-                <h5 className="font-bold text-pink-800">
-                  KEDIAMAN MEMPELAI PRIA
-                </h5>
+                <h5 className="font-bold text-pink-800">TEMPAT</h5>
+                <p>Kediaman mempelai pria</p>
                 <p>Desa Hila</p>
               </div>
               <div>
@@ -221,14 +221,14 @@ const Invitation: NextPage = () => {
 
             <div className="mx-[-30px] px-[2rem] text-center bg-[#FEECE9]">
               <div className="py-5">
-                <h3 className="text-5xl mb-8 text-pink-800 font-sacramento">
+                <h3 className="text-4xl mb-8 text-pink-800 font-sacramento">
                   Turut Mengundang
                 </h3>
-                <h5>KELUARGA MEMPELAI LAKI-LAKI</h5>
+                <h5 className="text-pink-800">KELUARGA MEMPELAI LAKI-LAKI</h5>
                 <p>Bpk Jakaria Ely dan istri Mujna ollong</p>
               </div>
               <div className="py-5">
-                <h5>KELUARGA MEMPELAI PEREMPUAN</h5>
+                <h5 className="text-pink-800">KELUARGA MEMPELAI PEREMPUAN</h5>
                 <p>Bpk Abdul basir Sanaky dan Istri Hayati Pelupessy</p>
               </div>
             </div>
@@ -236,7 +236,7 @@ const Invitation: NextPage = () => {
             <br />
 
             <div className="text-center">
-              <h3 className="text-5xl mb-8 pt-5 text-pink-800 font-sacramento">
+              <h3 className="text-4xl mb-8 pt-5 text-pink-800 font-sacramento">
                 Gallery
               </h3>
 
@@ -273,7 +273,7 @@ const Invitation: NextPage = () => {
 
             {/* <div id="tanda-kasih" className="mt-4 text-center">
               <div className={styles.shadow__custom}>
-                <h3 className="text-5xl mb-8 pt-5 text-pink-800 font-sacramento">
+                <h3 className="text-4xl mb-8 pt-5 text-pink-800 font-sacramento">
                   Tanda Kasih
                 </h3>
                 <p>
