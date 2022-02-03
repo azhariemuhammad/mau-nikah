@@ -14,11 +14,11 @@ const AudioPlayer = () => {
           width="44"
           height="44"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="#ffffff"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <circle cx="6" cy="17" r="3" />
@@ -33,11 +33,11 @@ const AudioPlayer = () => {
           width="44"
           height="44"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="#ffffff"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <rect x="6" y="5" width="4" height="14" rx="1" />
