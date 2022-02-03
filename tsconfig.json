@@ -6,6 +6,7 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/public/*": ["public/*"],
+      "@/hooks/*": ["hooks/*"],
       "@/styles/*": ["styles/*"]
     },
     "allowJs": true,

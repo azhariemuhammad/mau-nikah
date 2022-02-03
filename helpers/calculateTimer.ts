@@ -8,7 +8,6 @@ interface TimeLeft {
 const calculateTimeLeft = (eventDate: string) => {
   const year = new Date().getFullYear();
   let difference = +new Date(eventDate) - +new Date();
-  console.log({ difference, newDate: new Date(eventDate) });
 
   let timeLeft: TimeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
 

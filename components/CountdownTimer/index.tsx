@@ -14,7 +14,7 @@ const CountdownTimer = ({ eventDate }: CountDownTimerProps) => {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [eventDate]);
+  });
 
   return (
     <ul className="flex justify-center">

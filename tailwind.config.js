@@ -11,7 +11,6 @@ module.exports = {
       fontFamily: {
         primary: ['Work Sans', ...fontFamily.mono],
         sacramento: 'Sacramento',
-        tangerine: 'Tangerine',
       },
     },
   },

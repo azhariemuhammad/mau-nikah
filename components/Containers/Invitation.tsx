@@ -3,18 +3,16 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 
-import wedding from '@/public/images/wedding-1.jpg';
 import basmallah from '@/public/images/basmallah.png';
-import avatar from '@/public/images/avatar.jpg';
 import divider from '@/public/icons/divider.svg';
-import avatar1 from '@/public/images/avatar-1.jpg';
-import qrcode from '@/public/images/qrcode.jpeg';
+
 import styles from '@/styles/Home.module.css';
 import MetaHeadComponent from '@/components/MetaHead';
 import { Carousel, Slide } from '@/components/Carousel';
 import CountdownTimer from '@/components/CountdownTimer';
 import WelcomePage from '@/components/WelcomePage';
 import LoaderLove from '@/components/Loader';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const Invitation: NextPage = () => {
   const [hasOpen, setHasOpen] = useState(false);
@@ -96,6 +94,7 @@ const Invitation: NextPage = () => {
                     </div>
                   </div>
                 </div>
+                <AudioPlayer />
               </div>
             </div>
             <div className="my-8 flex flex-col text-center justify-center">
@@ -128,7 +127,7 @@ const Invitation: NextPage = () => {
                   </motion.div>
                 </motion.div> */}
                 <div className="my-8">
-                  <i className="text-3xl text-pink-800 font-bold font-tangerine">
+                  <i className="text-3xl text-pink-800 font-bold font-sacramento">
                     Musliha Fatma Sanaky S.Pd
                   </i>
                   <p className="text-sm">Putri tercinta</p>
@@ -152,7 +151,7 @@ const Invitation: NextPage = () => {
                   </motion.div>
                 </motion.div> */}
                 <div className="my-8">
-                  <i className="text-3xl font-bold font-tangerine text-pink-800">
+                  <i className="text-3xl font-bold font-sacramento text-pink-800">
                     Afwan Ryan M Ely A.Md AK
                   </i>
                   <p className="text-sm">Putra tercinta</p>
@@ -219,7 +218,7 @@ const Invitation: NextPage = () => {
               </div>
             </div>
 
-            <div className="mx-[-30px] px-[2rem] text-center bg-[#FEECE9]">
+            <div className="mx-[-30px] p-[2rem] text-center bg-[#FEECE9]">
               <div className="py-5">
                 <h3 className="text-4xl mb-8 text-pink-800 font-sacramento">
                   Turut Mengundang
@@ -232,10 +231,8 @@ const Invitation: NextPage = () => {
                 <p>Bpk Abdul basir Sanaky dan Istri Hayati Pelupessy</p>
               </div>
             </div>
-            <br />
-            <br />
 
-            <div className="text-center">
+            <div className="text-center pt-[2rem]">
               <h3 className="text-4xl mb-8 pt-5 text-pink-800 font-sacramento">
                 Gallery
               </h3>
@@ -279,27 +276,9 @@ const Invitation: NextPage = () => {
                 </Slide>
               </Carousel>
             </div>
-
-            {/* <div id="tanda-kasih" className="mt-4 text-center">
-              <div className={styles.shadow__custom}>
-                <h3 className="text-4xl mb-8 pt-5 text-pink-800 font-sacramento">
-                  Tanda Kasih
-                </h3>
-                <p>
-                  Kehadiran dan doa anda adalah hadiah terbaik untuk kami. Namun
-                  jika memberi adalah suatu bentuk tanda kasih bagi anda, tombol
-                  ini akan menjadi media terbaik yang bisa kami sediakan secara
-                  virtual di masa pandemi.
-                </p>
-                <br />
-                <p>Wassalamualaikum Warahmatullahi Wabarakatuh.</p>
-              </div>
-              <div className="mt-8">
-                <Image src={qrcode} />
-              </div>
-            </div> */}
           </main>
         </div>
+        <div></div>
       </div>
     </>
   );

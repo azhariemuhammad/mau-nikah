@@ -8,11 +8,10 @@ interface WelcomePage {
   handleOpenInvitation: () => void;
 }
 const WelcomePage = ({ isOpen, handleOpenInvitation }: WelcomePage) => {
-  const {
-    query: { to = '' },
-  } = useRouter();
+  const { query } = useRouter();
 
-  const guest = to || '';
+  const guest = (query?.to as string) || '';
+  console.log({ guest });
   return (
     <>
       <MetaHeadComponent />
@@ -24,7 +23,9 @@ const WelcomePage = ({ isOpen, handleOpenInvitation }: WelcomePage) => {
         >
           <div className="mb-8">
             <h5 className="text-white">KEPADA BAPAK/IBU/SAUDARA/I</h5>
-            <h5 className="text-bold text-white">{guest}</h5>
+            <h5 className="text-bold text-white text-2xl mb-1">
+              {guest.toUpperCase()}
+            </h5>
             <p className="text-white">
               Dengan senang hati mengundang Anda untuk hadir di hari pernikahan
               kami
