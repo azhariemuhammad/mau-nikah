@@ -13,8 +13,10 @@ import CountdownTimer from '@/components/CountdownTimer';
 import WelcomePage from '@/components/WelcomePage';
 import LoaderLove from '@/components/Loader';
 import AudioPlayer from '@/components/AudioPlayer';
+import Footer from '@/components/Footer';
 
-const Invitation: NextPage = () => {
+const Invitation: NextPage = ({ weddData }) => {
+  console.log({ weddData });
   const [hasOpen, setHasOpen] = useState(false);
   const [isOpenModal, setOpenModal] = useState(false);
 
@@ -33,21 +35,21 @@ const Invitation: NextPage = () => {
     );
   }
 
-  const cardVariants: Variants = {
-    offscreen: {
-      x: 1000,
-    },
-    onscreen: {
-      x: 0,
-      rotate: -10,
-      transition: { duration: 1, type: 'tween' },
-      // transition: {
-      //   type: 'spring',
-      //   bounce: 0.4,
-      //   duration: 0.8,
-      // },
-    },
-  };
+  // const cardVariants: Variants = {
+  //   offscreen: {
+  //     x: 1000,
+  //   },
+  //   onscreen: {
+  //     x: 0,
+  //     rotate: -10,
+  //     transition: { duration: 1, type: 'tween' },
+  //     // transition: {
+  //     //   type: 'spring',
+  //     //   bounce: 0.4,
+  //     //   duration: 0.8,
+  //     // },
+  //   },
+  // };
 
   const eventDate = '02/12/2022';
 
@@ -69,13 +71,13 @@ const Invitation: NextPage = () => {
                 <div className={styles.background__flower}>
                   <div className="grid place-content-center h-screen">
                     <h1 className="text-5xl font-bold font-sacramento text-white text-center mt-7">
-                      Fatma
+                      {weddData.nickname_women}
                     </h1>
                     <h1 className="text-5xl font-bold font-sacramento text-white text-center">
                       &amp;
                     </h1>
                     <h1 className="text-5xl font-bold font-sacramento text-white text-center">
-                      Afwan
+                      {weddData.nickname_man}
                     </h1>
 
                     <div className="relative mt-8 bottom-[-60%]">
@@ -278,7 +280,7 @@ const Invitation: NextPage = () => {
             </div>
           </main>
         </div>
-        <div></div>
+        <Footer />
       </div>
     </>
   );

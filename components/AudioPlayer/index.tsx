@@ -7,7 +7,7 @@ const AudioPlayer = () => {
 
   return (
     <a onClick={toggle} className={styles.audio__btn}>
-      {playing ? (
+      {!playing ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="icon icon-tabler icon-tabler-music"
