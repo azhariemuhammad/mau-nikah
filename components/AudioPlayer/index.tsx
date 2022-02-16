@@ -2,8 +2,8 @@ import useAudio from '@/hooks/useAudio';
 import { AUDIO_1 } from '../../constants';
 import styles from './audio.module.css';
 
-const AudioPlayer = () => {
-  const { playing, toggle } = useAudio(AUDIO_1);
+const AudioPlayer = ({ audioUrl }: { audioUrl: string }) => {
+  const { playing, toggle } = useAudio(audioUrl || AUDIO_1);
 
   return (
     <a onClick={toggle} className={styles.audio__btn}>

@@ -1,5 +1,6 @@
 import nextConnect from 'next-connect';
 import { supabase } from '@/utils/supabaseClient';
+import getWeddingBySlug from 'models/getWeddings';
 
 const weddingApi = nextConnect()
   .get(async (req, res) => {
@@ -8,11 +9,7 @@ const weddingApi = nextConnect()
         query: { slug },
       } = req;
 
-      const response = await supabase
-        .from('weddings')
-        .select('*')
-        .eq('slug', slug);
-
+      const response = await getWeddingBySlug(slug);
       res.status(200).json(response);
     } catch (e) {
       res.status(500).json({
