@@ -12,6 +12,10 @@ module.exports = {
         primary: ['Work Sans', ...fontFamily.mono],
         sacramento: 'Sacramento',
       },
+      colors: {
+        redrose: '#FB7185',
+        olive: '#ADC2A9',
+      },
     },
   },
   plugins: [],

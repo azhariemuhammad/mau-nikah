@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem 5rem 2rem;
+  padding: 0 2rem;
 }
 
 .main {
@@ -164,7 +164,6 @@
 }
 .timer {
   height: 80px;
-  background-color: rgb(244 63 94);
   width: 80px;
   border-radius: 50%;
   padding: 16px 0;

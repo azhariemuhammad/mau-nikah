@@ -3,7 +3,7 @@ import { AUDIO_1 } from '../../constants';
 import styles from './audio.module.css';
 
 const AudioPlayer = ({ audioUrl }: { audioUrl: string }) => {
-  const { playing, toggle } = useAudio(audioUrl || AUDIO_1);
+  const { playing, toggle } = useAudio(audioUrl || '');
 
   return (
     <a onClick={toggle} className={styles.audio__btn}>

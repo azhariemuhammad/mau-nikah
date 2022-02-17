@@ -6,7 +6,7 @@ import basmallah from '@/public/images/basmallah.png';
 
 const Opening: NextPage = () => {
   return (
-    <div className="my-8 flex flex-col text-center justify-center">
+    <div className="py-8 flex flex-col text-center justify-center">
       <div className={styles.basmallah}>
         <Image src={basmallah} alt="basmallah" />
       </div>

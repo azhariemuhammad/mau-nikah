@@ -33,7 +33,7 @@ const BrideInfo = (props: BrideInfo) => {
                     <Image src={avatar} width={256} height={256} />
                   </motion.div>
                 </motion.div> */}
-        <div className="my-8">
+        <div className="py-8">
           <i className="text-3xl text-pink-800 font-bold font-sacramento">
             {fullnameWomen}
           </i>
@@ -57,7 +57,7 @@ const BrideInfo = (props: BrideInfo) => {
                     
                   </motion.div>
                 </motion.div> */}
-        <div className="my-8">
+        <div className="py-8">
           <i className="text-3xl font-bold font-sacramento text-pink-800">
             {fullnameMan}
           </i>
