@@ -79,7 +79,7 @@ const BrideInfo = (props: BrideInfo) => {
 
               </h3> */}
       <div className="mb-[2rem]">
-        <LoaderLove />
+        <LoaderLove bgColor="oceanblue" />
       </div>
       <div id="couple-2">
         {avatarMen && (

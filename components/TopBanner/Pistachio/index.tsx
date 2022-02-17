@@ -19,7 +19,7 @@ const TopBannerPistachio = ({
   return (
     <>
       <div className="bg-red">
-        <div style={{ width: '100%', height: '255px', position: 'relative' }}>
+        <div style={{ width: '100%', height: '475px', position: 'relative' }}>
           <Image
             alt="Mountains"
             src={mainBanner}

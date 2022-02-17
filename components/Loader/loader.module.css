@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+.loading__heart[data-variant='oceanblue'] {
+  stroke: #5388b7;
+}
+
 .loading__heart path {
   stroke-dashoffset: 0;
   stroke-dasharray: 1550;

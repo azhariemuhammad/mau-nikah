@@ -1,3 +1,4 @@
+import { capitalizeEachWord } from '@/utils/capitalizeEachWord';
 import { normalizeRelatives } from 'helpers/normalizeRelatives';
 import { useMemo } from 'react';
 
@@ -23,20 +24,20 @@ const BrideRelativesInfo = (props: BrideRelatives) => {
   );
 
   return (
-    <div className="mx-[-30px] p-[2rem] text-center bg-[#FEECE9]">
+    <div className="mx-[-30px] p-[2rem] text-center ">
       <div className="py-5">
         <h3 className="text-4xl mb-8 text-pink-800 font-sacramento">
           Turut Mengundang
         </h3>
         <h5 className="text-pink-800">KELUARGA MEMPELAI LAKI-LAKI</h5>
         {manRelativeNormalized.map((item) => (
-          <p key={item.id}>{item.relative}</p>
+          <p key={item.id}>{capitalizeEachWord(item.relative)}</p>
         ))}
       </div>
       <div className="py-5">
         <h5 className="text-pink-800">KELUARGA MEMPELAI PEREMPUAN</h5>
         {womenRelativeNormalized.map((item) => (
-          <p key={item.id}>{item.relative}</p>
+          <p key={item.id}>{capitalizeEachWord(item.relative)}</p>
         ))}
       </div>
     </div>

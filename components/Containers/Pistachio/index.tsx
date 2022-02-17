@@ -88,8 +88,12 @@ const PistachioContainer = ({ weddData }: WeddData) => {
             manRelative={weddData.man_relatives}
             womenRelative={weddData.women_relatives}
           />
-          <Gallery photos={photos} />
-          <TandaKasihComponent />
+          <div className="my-[40px]">
+            <Gallery photos={photos} />
+          </div>
+          <div className="my-[40px]">
+            <TandaKasihComponent />
+          </div>
         </div>
       </div>
     </>
