@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { Meta } from '../Containers/interface';
 import MetaHeadComponent from '../MetaHead';
 
 import styles from './welcome.module.css';
@@ -6,15 +7,22 @@ import styles from './welcome.module.css';
 interface WelcomePage {
   isOpen: boolean;
   handleOpenInvitation: () => void;
+  meta: Meta;
+  slug: string;
 }
-const WelcomePage = ({ isOpen, handleOpenInvitation }: WelcomePage) => {
+const WelcomePage = ({
+  isOpen,
+  meta,
+  slug,
+  handleOpenInvitation,
+}: WelcomePage) => {
   const { query } = useRouter();
 
   const guest = (query?.to as string) || '';
   console.log({ guest });
   return (
     <>
-      <MetaHeadComponent />
+      <MetaHeadComponent meta={meta} slug={slug} />
       <div>
         <div
           className={`px-[2rem]  text-center grid h-[100vh] place-content-center ${

@@ -28,6 +28,21 @@ const Invitation = ({ weddData }: WeddData) => {
   const [hasOpen, setHasOpen] = useState(false);
   const [isOpenModal, setOpenModal] = useState(false);
 
+  const {
+    fullname_man,
+    fullname_women,
+    father_name_man,
+    father_name_women,
+    mother_name_women,
+    mother_name_man,
+    photos,
+    nickname_women,
+    nickname_man,
+    slug,
+    audio_url,
+    theme,
+  } = weddData || {};
+
   const handleOpenInvitation = () => {
     setOpenModal(true);
     setTimeout(() => {
@@ -39,6 +54,8 @@ const Invitation = ({ weddData }: WeddData) => {
       <WelcomePage
         isOpen={isOpenModal}
         handleOpenInvitation={handleOpenInvitation}
+        meta={weddData.meta}
+        slug={slug}
       />
     );
   }
@@ -60,21 +77,6 @@ const Invitation = ({ weddData }: WeddData) => {
   };
 
   const eventDate = '02/12/2022';
-
-  const {
-    fullname_man,
-    fullname_women,
-    father_name_man,
-    father_name_women,
-    mother_name_women,
-    mother_name_man,
-    photos,
-    nickname_women,
-    nickname_man,
-    slug,
-    audio_url,
-    theme,
-  } = weddData || {};
 
   return (
     <>
