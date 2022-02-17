@@ -67,7 +67,7 @@ const PistachioContainer = ({ weddData }: WeddData) => {
           kedua mempelai
         </p>
       </div>
-      {/* <Surah /> */}
+      <Surah />
     </>
   );
 };
