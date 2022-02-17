@@ -170,6 +170,10 @@
   margin-right: 8px;
 }
 
+.timer[data-variant='oceanblue'] {
+  background-color: #93b5c6;
+}
+
 .breath {
   animation: breathing 1s ease-out infinite normal;
   -webkit-animation: breathing 1s ease-out infinite normal;

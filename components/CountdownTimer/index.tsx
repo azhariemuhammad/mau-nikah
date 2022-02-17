@@ -9,6 +9,7 @@ interface CountDownTimerProps {
 const CountdownTimer = ({ eventDate, bgColor }: CountDownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(eventDate));
   const isLive = Number(new Date(eventDate)) < Number(new Date());
+
   useEffect(() => {
     if (isLive) return;
     const timer = setTimeout(() => {
@@ -23,19 +24,31 @@ const CountdownTimer = ({ eventDate, bgColor }: CountDownTimerProps) => {
   return (
     <div className="py-5">
       <ul className="flex justify-center">
-        <li className={`bg-${bgColor} ${styles.timer} ${styles.breath}`}>
+        <li
+          className={`${styles.timer} ${styles.breath}`}
+          data-variant={bgColor}
+        >
           <p className="text-2xl text-white">{timeLeft.days}</p>
           <p className="text-sm">Hari</p>
         </li>
-        <li className={`bg-${bgColor} ${styles.timer} ${styles.breath}`}>
+        <li
+          className={`${styles.timer} ${styles.breath}`}
+          data-variant={bgColor}
+        >
           <p className="text-2xl text-white">{timeLeft.hours}</p>
           <p className="text-sm">Jam</p>
         </li>
-        <li className={`bg-${bgColor} ${styles.timer} ${styles.breath}`}>
+        <li
+          className={`${styles.timer} ${styles.breath}`}
+          data-variant={bgColor}
+        >
           <p className="text-2xl text-white">{timeLeft.minutes}</p>
           <p className="text-sm">Menit</p>
         </li>
-        <li className={`bg-${bgColor} ${styles.timer} ${styles.breath}`}>
+        <li
+          className={`${styles.timer} ${styles.breath}`}
+          data-variant={bgColor}
+        >
           <p className="text-2xl text-white">{timeLeft.seconds}</p>
           <p className="text-sm">Detik</p>
         </li>
@@ -45,6 +58,6 @@ const CountdownTimer = ({ eventDate, bgColor }: CountDownTimerProps) => {
 };
 
 CountdownTimer.defaulProps = {
-  bgColor: 'redrose',
+  bgColor: '#FB7185',
 };
 export default CountdownTimer;

@@ -53,6 +53,8 @@ const RoseContainer = ({ weddData }: WeddData) => {
     nickname_man,
     slug,
     audio_url,
+    avatar_men,
+    avatar_women,
   } = weddData || {};
 
   return (
@@ -76,6 +78,8 @@ const RoseContainer = ({ weddData }: WeddData) => {
                 fatherNameWomen={father_name_women}
                 motherNameMan={mother_name_man}
                 motherNameWomen={mother_name_women}
+                avatarMen={avatar_men}
+                avatarWomen={avatar_women}
               />
               {/* <div className="my-8">
                 <Image width={200} height={100} src={divider} />

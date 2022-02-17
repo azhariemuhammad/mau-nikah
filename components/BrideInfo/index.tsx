@@ -1,4 +1,7 @@
 import LoaderLove from '@/components/Loader';
+import { motion, Variants } from 'framer-motion';
+import styles from '@/styles/Home.module.css';
+import Image from 'next/image';
 
 interface BrideInfo {
   fullnameMan: string;
@@ -7,6 +10,9 @@ interface BrideInfo {
   fatherNameWomen: string;
   motherNameMan: string;
   motherNameWomen: string;
+  bgColor?: string;
+  avatarMen: string;
+  avatarWomen: string;
 }
 const BrideInfo = (props: BrideInfo) => {
   const {
@@ -16,25 +22,52 @@ const BrideInfo = (props: BrideInfo) => {
     fatherNameWomen,
     motherNameMan,
     motherNameWomen,
+    avatarMen,
+    avatarWomen,
+    bgColor,
   } = props;
+
+  const cardVariants: Variants = {
+    offscreen: {
+      x: 1000,
+    },
+    onscreen: {
+      x: 0,
+      rotate: -10,
+      transition: { duration: 0.7, type: 'tween' },
+      // transition: {
+      //   type: 'spring',
+      //   bounce: 0.4,
+      //   duration: 0.8,
+      // },
+    },
+  };
+
   return (
     <>
       <div id="couple-1">
-        {/* <motion.div
-                  className="card-container overflow-hidden relative"
-                  initial="offscreen"
-                  whileInView="onscreen"
-                  viewport={{ once: true, amount: 0.8 }}
-                >
-                  <motion.div
-                    variants={cardVariants}
-                    className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
-                  >
-                    <Image src={avatar} width={256} height={256} />
-                  </motion.div>
-                </motion.div> */}
+        {avatarWomen && (
+          <motion.div
+            className="card-container overflow-hidden relative"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            <motion.div
+              variants={cardVariants}
+              className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
+            >
+              <Image
+                src={avatarWomen}
+                width={256}
+                height={256}
+                className="rounded-full"
+              />
+            </motion.div>
+          </motion.div>
+        )}
         <div className="py-8">
-          <i className="text-3xl text-pink-800 font-bold font-sacramento">
+          <i className={`text-3xl text-zinc-900 font-bold font-sacramento`}>
             {fullnameWomen}
           </i>
           <p className="text-sm">Putri tercinta</p>
@@ -45,20 +78,29 @@ const BrideInfo = (props: BrideInfo) => {
       {/* <h3 className="text-5xl font-bold text-pink-800">
 
               </h3> */}
-      <LoaderLove />
+      <div className="mb-[2rem]">
+        <LoaderLove />
+      </div>
       <div id="couple-2">
-        {/* <motion.div
-                  className="card-container overflow-hidden relative"
-                  initial="offscreen"
-                  whileInView="onscreen"
-                  viewport={{ once: true, amount: 0.8 }}
-                >
-                  <motion.div variants={cardVariants} className={`w-full`}>
-                    
-                  </motion.div>
-                </motion.div> */}
+        {avatarMen && (
+          <motion.div
+            className="card-container overflow-hidden relative"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            <motion.div variants={cardVariants} className={`w-full`}>
+              <Image
+                src={avatarMen}
+                width={256}
+                height={256}
+                className="rounded-full"
+              />
+            </motion.div>
+          </motion.div>
+        )}
         <div className="py-8">
-          <i className="text-3xl font-bold font-sacramento text-pink-800">
+          <i className="text-3xl font-bold font-sacramento text-zinc-900">
             {fullnameMan}
           </i>
           <p className="text-sm">Putra tercinta</p>

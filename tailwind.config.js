@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         redrose: '#FB7185',
+        oceanblue: '#5388B7',
         olive: '#ADC2A9',
+        white: '#ffff',
       },
     },
   },

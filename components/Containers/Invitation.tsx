@@ -81,8 +81,8 @@ const Invitation = ({ weddData }: WeddData) => {
   return (
     <>
       <MetaHeadComponent meta={weddData.meta} slug={slug} />
-      {theme === 'rose' && <PistachioContainer weddData={weddData} />}
-      {theme === 'pistachio' && <RoseContainer weddData={weddData} />}
+      {theme === 'pistachio' && <PistachioContainer weddData={weddData} />}
+      {theme === 'rose' && <RoseContainer weddData={weddData} />}
     </>
   );
 };

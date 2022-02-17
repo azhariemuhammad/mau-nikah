@@ -14,11 +14,11 @@ const BrideRelativesInfo = (props: BrideRelatives) => {
   const manRelative = props.manRelative;
   const womenRelative = props.womenRelative;
   const manRelativeNormalized = useMemo(
-    () => normalizeRelatives(manRelative) as Array<Relative>,
+    () => normalizeRelatives(manRelative || []) as Array<Relative>,
     [manRelative]
   );
   const womenRelativeNormalized = useMemo(
-    () => normalizeRelatives(womenRelative) as Array<Relative>,
+    () => normalizeRelatives(womenRelative || []) as Array<Relative>,
     [womenRelative]
   );
 
