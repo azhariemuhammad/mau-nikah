@@ -14,6 +14,8 @@ import BrideRelativesInfo from '@/components/BrideRelativesInfo';
 import TandaKasihComponent from '@/components/TandaKasih';
 import { useEffect, useMemo } from 'react';
 import { locale } from 'locale';
+import WallOfLove from '@/components/WallOfLove';
+import SendingLove from '@/components/WallOfLove/SendingLove';
 
 dayjs.locale(locale as ILocale);
 
@@ -34,6 +36,7 @@ const PistachioContainer = ({ weddData }: WeddData) => {
     avatar_men,
     avatar_women,
     rundowns,
+    id,
   } = weddData || {};
 
   // const eventDate = '02/26/2022';
@@ -122,6 +125,11 @@ const PistachioContainer = ({ weddData }: WeddData) => {
           <div className="my-[40px]">
             <TandaKasihComponent />
           </div>
+          <h3 className="text-4xl text-center mb-8 pt-5 text-pink-800 font-sacramento">
+            Wall of Love
+          </h3>
+          <WallOfLove />
+          <SendingLove weddingId={id} />
         </div>
       </div>
     </>
