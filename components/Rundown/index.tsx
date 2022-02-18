@@ -66,7 +66,7 @@ const RundownComponent = ({ rundown }: RundownList) => {
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: false, amount: 'all' }}
           key={key}
         >
           <motion.div variants={cardVariants} key={key}>
