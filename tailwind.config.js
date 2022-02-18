@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         primary: ['Work Sans', ...fontFamily.mono],
         sacramento: 'Sacramento',
+        reey: 'Reey',
       },
       colors: {
         redrose: '#FB7185',

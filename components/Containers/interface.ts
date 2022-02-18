@@ -3,11 +3,11 @@ export interface Rundown {
   created_at: string;
   wedding_id: number;
   event_name: string;
-  event_date: string;
-  event_time_start: string;
-  event_time_end: string;
+  event_date_start: string;
+  event_date_end: string;
   pin_point: string;
   address: string;
+  is_main_event: boolean;
 }
 
 export interface Meta {

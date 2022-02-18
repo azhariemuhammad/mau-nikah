@@ -1,4 +1,7 @@
-import { WeddData } from '../interface';
+import dayjs from 'dayjs';
+import AOS from 'aos';
+
+import { Rundown, WeddData } from '@/components/Containers/interface';
 import TopBannerPistachio from '@/components/TopBanner/Pistachio';
 import styles from '@/styles/Home.module.css';
 import CountdownTimer from '@/components/CountdownTimer';
@@ -9,6 +12,10 @@ import RundownComponent from '@/components/Rundown';
 import Gallery from '@/components/Gallery';
 import BrideRelativesInfo from '@/components/BrideRelativesInfo';
 import TandaKasihComponent from '@/components/TandaKasih';
+import { useEffect, useMemo } from 'react';
+import { locale } from 'locale';
+
+dayjs.locale(locale as ILocale);
 
 const PistachioContainer = ({ weddData }: WeddData) => {
   const {
@@ -26,9 +33,23 @@ const PistachioContainer = ({ weddData }: WeddData) => {
     bride_main_banner,
     avatar_men,
     avatar_women,
+    rundowns,
   } = weddData || {};
 
-  const eventDate = '02/26/2022';
+  // const eventDate = '02/26/2022';
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  const mainEventDate = useMemo(() => {
+    if (rundowns.length) {
+      const mainEvent = rundowns.find((item) => item.is_main_event == true);
+      console.log({ mainEvent });
+      return mainEvent as Rundown;
+    }
+    return {} as Rundown;
+  }, [rundowns]);
   return (
     <>
       <TopBannerPistachio
@@ -41,13 +62,17 @@ const PistachioContainer = ({ weddData }: WeddData) => {
         <div className={styles.container}>
           <main className="text-center">
             <div className="text-center pt-[3rem]">
-              <p className="text-3xl  font-bold font-sacramento">
+              <p className="text-3xl  font-bold font-reey">
                 {nickname_man} &amp; {nickname_women}
               </p>
             </div>
             <div className="pt-[2rem]">
               <p className="font-bold italic">Undangan pernikahan</p>
-              <p className="font-bold italic">Sabtu, 26 Februari 2022</p>
+              <p className="font-bold italic">
+                {dayjs(mainEventDate.event_date_start).format(
+                  'dddd, DD MMMM YYYY'
+                )}
+              </p>
             </div>
             <div className="mt-[30px]">
               <button className="rounded-md p-2 text-white bg-oceanblue">
@@ -55,7 +80,10 @@ const PistachioContainer = ({ weddData }: WeddData) => {
               </button>
             </div>
             <div className="mt-[24px]">
-              <CountdownTimer eventDate={eventDate} bgColor="oceanblue" />
+              <CountdownTimer
+                eventDate={mainEventDate.event_date_start}
+                bgColor="oceanblue"
+              />
             </div>
             <Opening />
             <BrideInfo
@@ -73,7 +101,7 @@ const PistachioContainer = ({ weddData }: WeddData) => {
         </div>
       </div>
       <div className="text-center p-8">
-        <p>
+        <p data-aos="fade-up">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
           Bapak/Ibu/Saudara/i berkenan hadir dan memberikan Doa restu kepada
           kedua mempelai

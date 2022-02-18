@@ -1,34 +1,32 @@
+import dayjs from 'dayjs';
 import { motion, Variants } from 'framer-motion';
 import { Rundown } from '@/components/Containers/interface';
 import styles from '@/styles/Home.module.css';
+import { locale } from 'locale';
+
+dayjs.locale(locale as ILocale);
 
 interface RundownList {
   rundown: Array<Rundown>;
 }
 interface Event {
   eventName: string;
-  eventDate: string;
-  eventTimeStart: string;
-  eventTimeEnd: string;
+  eventDateStart: string;
+  eventDateEnd: string;
   pinPoint: string;
   address: string;
 }
 const EventDetail = (props: Event) => {
-  const {
-    eventName,
-    eventDate,
-    eventTimeStart,
-    eventTimeEnd,
-    pinPoint,
-    address,
-  } = props;
+  const { eventName, eventDateStart, eventDateEnd, pinPoint, address } = props;
+  console.log({ eventDateStart });
   return (
     <>
       <div className="py-1">
         <h5 className="font-bold text-pink-800">{eventName}</h5>
-        <p>{eventDate}</p>
+        <p>{dayjs(eventDateStart).format('DD MMMM YYYY')}</p>
         <p>
-          {eventTimeStart} - {`${eventTimeEnd ? eventTimeEnd : 'Selesai'}`}
+          {dayjs(eventDateStart).format('HH:mm')} -{' '}
+          {`${eventDateEnd ? dayjs(eventDateEnd).format('HH:mm') : 'Selesai'}`}
         </p>
       </div>
       <div className="my-5">
@@ -61,7 +59,6 @@ const RundownComponent = ({ rundown }: RundownList) => {
   return (
     <div id="schedule" className="text-center py-8">
       <h3 className="text-4xl mb-2 text-pink-800 font-sacramento">Acara</h3>
-
       {rundown.map((item, key) => (
         <motion.div
           initial="offscreen"
@@ -69,14 +66,17 @@ const RundownComponent = ({ rundown }: RundownList) => {
           viewport={{ once: false, amount: 'all' }}
           key={key}
         >
-          <motion.div variants={cardVariants} key={key}>
+          <motion.div
+            variants={cardVariants}
+            animate={{ scale: [1.2, 1] }}
+            key={key}
+          >
             <div className={`${styles.shadow__custom} mb-4`}>
               <EventDetail
                 key={key}
                 eventName={item.event_name}
-                eventDate={item.event_date}
-                eventTimeStart={item.event_time_start}
-                eventTimeEnd={item.event_time_end}
+                eventDateStart={item.event_date_start}
+                eventDateEnd={item.event_date_end}
                 pinPoint={item.pin_point}
                 address={item.address}
               />

@@ -52,13 +52,13 @@ const WelcomePage = ({
             kami
           </p>
 
-          <h1 className="text-5xl font-bold font-sacramento text-white text-center mt-5">
+          <h1 className="text-5xl font-bold font-reey text-white text-center mt-5">
             {nicknameWomen}
           </h1>
-          <h1 className="text-5xl font-bold font-sacramento text-white text-center">
+          <h1 className="text-5xl font-bold font-reey text-white text-center">
             &amp;
           </h1>
-          <h1 className="text-5xl font-bold font-sacramento text-white text-center">
+          <h1 className="text-5xl font-bold font-reey text-white text-center">
             {nicknameMan}
           </h1>
         </div>

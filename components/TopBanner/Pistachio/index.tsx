@@ -5,17 +5,10 @@ import styles from '@/styles/Home.module.css';
 import AudioPlayer from '@/components/AudioPlayer';
 
 export interface TopBannerProps {
-  nicknameWomen: string;
-  nicknameMan: string;
   audioUrl: string;
   mainBanner: string;
 }
-const TopBannerPistachio = ({
-  nicknameWomen,
-  nicknameMan,
-  audioUrl,
-  mainBanner,
-}: TopBannerProps) => {
+const TopBannerPistachio = ({ audioUrl, mainBanner }: TopBannerProps) => {
   return (
     <>
       <div className="bg-red">

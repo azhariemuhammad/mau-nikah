@@ -1,7 +1,9 @@
 import LoaderLove from '@/components/Loader';
-import { motion, Variants } from 'framer-motion';
+
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
+import AOS from 'aos';
+import { useEffect } from 'react';
 
 interface BrideInfo {
   fullnameMan: string;
@@ -24,49 +26,28 @@ const BrideInfo = (props: BrideInfo) => {
     motherNameWomen,
     avatarMen,
     avatarWomen,
-    bgColor,
   } = props;
 
-  const cardVariants: Variants = {
-    offscreen: {
-      x: 1000,
-    },
-    onscreen: {
-      x: 0,
-      rotate: -10,
-      transition: { duration: 0.7, type: 'tween' },
-      // transition: {
-      //   type: 'spring',
-      //   bounce: 0.4,
-      //   duration: 0.8,
-      // },
-    },
-  };
+  useEffect(() => {
+    AOS.init();
+  }, [AOS]);
 
   return (
     <>
-      <div id="couple-1">
+      <div id="couple-1" data-aos="fade-right">
         {avatarWomen && (
-          <motion.div
-            className="card-container overflow-hidden relative"
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
+          <div
+            className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
           >
-            <motion.div
-              variants={cardVariants}
-              className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
-            >
-              <Image
-                src={avatarWomen}
-                width={256}
-                height={256}
-                className="rounded-full"
-              />
-            </motion.div>
-          </motion.div>
+            <Image
+              src={avatarWomen}
+              width={256}
+              height={256}
+              className="rounded-full"
+            />
+          </div>
         )}
-        <div className="py-8">
+        <div className="py-8" data-aos="fade-up">
           <i className={`text-3xl text-zinc-900 font-bold font-sacramento`}>
             {fullnameWomen}
           </i>
@@ -81,25 +62,20 @@ const BrideInfo = (props: BrideInfo) => {
       <div className="mb-[2rem]">
         <LoaderLove bgColor="oceanblue" />
       </div>
-      <div id="couple-2">
+      <div id="couple-2" data-aos="fade-right">
         {avatarMen && (
-          <motion.div
-            className="card-container overflow-hidden relative"
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
+          <div
+            className={`w-full rounded-full max-w-[256px] ${styles.avatar__wrapper}`}
           >
-            <motion.div variants={cardVariants} className={`w-full`}>
-              <Image
-                src={avatarMen}
-                width={256}
-                height={256}
-                className="rounded-full"
-              />
-            </motion.div>
-          </motion.div>
+            <Image
+              src={avatarMen}
+              width={256}
+              height={256}
+              className="rounded-full"
+            />
+          </div>
         )}
-        <div className="py-8">
+        <div className="py-8" data-aos="fade-up">
           <i className="text-3xl font-bold font-sacramento text-zinc-900">
             {fullnameMan}
           </i>
