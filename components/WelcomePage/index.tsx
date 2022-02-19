@@ -45,9 +45,7 @@ const WelcomePage = ({
         <div className="absolute inset-x-0 bottom-20">
           <div className="mb-8">
             <h5 className="text-white">KEPADA BAPAK/IBU/SAUDARA/I</h5>
-            <h5 className="text-bold text-white text-2xl mb-1">
-              {capitalizeEachWord(guest)}
-            </h5>
+            <h5 className="text-bold text-white text-2xl mb-1">{guest}</h5>
             <p className="text-white">
               Dengan senang hati mengundang Anda untuk hadir di hari pernikahan
               kami
