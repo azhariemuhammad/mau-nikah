@@ -29,7 +29,9 @@ const Invitation = ({ weddData }: WeddData) => {
         nicknameWomen={nickname_women}
         slug={slug}
       />
-      {theme === 'pistachio' && <PistachioContainer weddData={weddData} />}
+      {theme === 'pistachio' && (
+        <PistachioContainer weddData={weddData} isOpenModal={isOpenModal} />
+      )}
       {theme === 'rose' && <RoseContainer weddData={weddData} />}
     </>
   );

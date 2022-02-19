@@ -7,8 +7,14 @@ import AudioPlayer from '@/components/AudioPlayer';
 export interface TopBannerProps {
   audioUrl: string;
   mainBanner: string;
+  isOpenModal: boolean;
 }
-const TopBannerPistachio = ({ audioUrl, mainBanner }: TopBannerProps) => {
+const TopBannerPistachio = ({
+  audioUrl,
+  mainBanner,
+  isOpenModal,
+}: TopBannerProps) => {
+  console.log({ isOpenModal });
   return (
     <>
       <div className="bg-red">
@@ -19,7 +25,7 @@ const TopBannerPistachio = ({ audioUrl, mainBanner }: TopBannerProps) => {
             layout="fill"
             objectFit="cover"
           />
-          <AudioPlayer audioUrl={audioUrl} />
+          {isOpenModal && <AudioPlayer audioUrl={audioUrl} />}
         </div>
       </div>
     </>

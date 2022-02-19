@@ -19,7 +19,7 @@ import Footer from '@/components/Footer';
 
 dayjs.locale(locale as ILocale);
 
-const PistachioContainer = ({ weddData }: WeddData) => {
+const PistachioContainer = ({ weddData, isOpenModal }: WeddData) => {
   const {
     fullname_man,
     fullname_women,
@@ -53,6 +53,8 @@ const PistachioContainer = ({ weddData }: WeddData) => {
     }
     return {} as Rundown;
   }, [rundowns]);
+
+  console.log({ isOpenModal }, 'container');
   return (
     <>
       <TopBannerPistachio
@@ -60,6 +62,7 @@ const PistachioContainer = ({ weddData }: WeddData) => {
         mainBanner={bride_main_banner}
         nicknameWomen={nickname_women}
         nicknameMan={nickname_man}
+        isOpenModal={isOpenModal || false}
       />
       <div className="bg-[#ffff] max-w-[640px] m-auto">
         <div className={styles.container}>

@@ -41,6 +41,7 @@ export interface Wedding {
 
 export interface WeddData {
   weddData: Wedding;
+  isOpenModal?: boolean;
 }
 
 export interface Message {
