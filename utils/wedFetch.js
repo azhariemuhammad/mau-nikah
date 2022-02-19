@@ -20,6 +20,8 @@ const wedFetcher = async (url, options = {}) => {
         ok: result.statusText,
         error: result.error,
         data: result.data,
+        count: result?.count,
+        page: result?.page,
       };
     })
     .catch((e) => {

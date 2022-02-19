@@ -14,8 +14,8 @@ import BrideRelativesInfo from '@/components/BrideRelativesInfo';
 import TandaKasihComponent from '@/components/TandaKasih';
 import { useEffect, useMemo } from 'react';
 import { locale } from 'locale';
-import WallOfLove from '@/components/WallOfLove';
-import SendingLove from '@/components/WallOfLove/SendingLove';
+import ContainerWallOfLove from '@/components/WallOfLove/Container';
+import Footer from '@/components/Footer';
 
 dayjs.locale(locale as ILocale);
 
@@ -64,7 +64,7 @@ const PistachioContainer = ({ weddData }: WeddData) => {
       <div className="bg-[#ffff] max-w-[640px] m-auto">
         <div className={styles.container}>
           <main className="text-center">
-            <div className="text-center pt-[3rem]">
+            <div className="text-center mb-[2rem] pt-[3rem]">
               <p className="text-3xl  font-bold font-reey">
                 {nickname_man} &amp; {nickname_women}
               </p>
@@ -128,10 +128,10 @@ const PistachioContainer = ({ weddData }: WeddData) => {
           <h3 className="text-4xl text-center mb-8 pt-5 text-pink-800 font-sacramento">
             Wall of Love
           </h3>
-          <WallOfLove />
-          <SendingLove weddingId={id} />
+          <ContainerWallOfLove weddingId={id} />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

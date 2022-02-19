@@ -42,3 +42,17 @@ export interface Wedding {
 export interface WeddData {
   weddData: Wedding;
 }
+
+export interface Message {
+  id?: number;
+  created_at?: string;
+  message: string;
+  wedding_id: number;
+  sender: string;
+  sender_description: string;
+}
+
+export interface WallOfLove {
+  result: Array<Message>;
+  error: string;
+}

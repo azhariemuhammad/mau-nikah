@@ -1,15 +1,16 @@
-import { ChangeEvent, ChangeEventHandler, useState } from 'react';
+import { ChangeEvent, ChangeEventHandler, useRef, useState } from 'react';
 import styles from '@/styles/Home.module.css';
-
-import postLove from 'models/postLove';
+import { Message } from '@/components/Containers/interface';
 
 interface SendingLoveProps {
   weddingId: number;
+  onsubmit: (item: Message) => void;
 }
-const SendingLove = ({ weddingId }: SendingLoveProps) => {
+const SendingLove = ({ weddingId, onsubmit }: SendingLoveProps) => {
   const [sender, setSender] = useState('');
   const [description, setDescription] = useState('');
   const [message, setMessage] = useState('');
+  const [progress, setProgress] = useState('none');
 
   const handleOnchangeSender = (e: ChangeEvent<HTMLInputElement>) => {
     // @ts-ignore
@@ -27,30 +28,23 @@ const SendingLove = ({ weddingId }: SendingLoveProps) => {
 
   const handleSendingLove = async (e: any) => {
     e.preventDefault();
+
     const payload = {
       wedding_id: weddingId,
       sender_description: description,
       sender,
       message,
     };
-    try {
-      const response = await postLove(payload);
-      console.log(response);
-      // if (ok) {
-      //   renderToast('Berhasil menyimpan ide mu');
-      //   push('/idea');
-      // } else {
-      //   renderToast('Gagal menyimpan ide mu', true);
-      // }
-    } catch (e) {
-      console.error(e);
-    }
+    setProgress('sending');
+    onsubmit(payload);
   };
+
+  const isDisabled = message.length < 3 || sender.length < 3;
   return (
     <>
-      <h3 className="text-4xl text-center mb-8 pt-5 text-pink-800 font-sacramento">
+      {/* <h3 className="text-4xl text-center mb-8 pt-5 text-pink-800 font-sacramento">
         Kirim Ucapan &amp; Doa
-      </h3>
+      </h3> */}
       <div className={`my-8 ${styles.shadow__custom}`}>
         <form>
           <div className="mt-2">
@@ -113,8 +107,10 @@ const SendingLove = ({ weddingId }: SendingLoveProps) => {
           </div>
           <div className="mt-6 text-right">
             <button
+              disabled={isDisabled || progress === 'sending'}
               onClick={handleSendingLove}
-              className="bg-oceanblue hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"
+              type="button"
+              className="bg-oceanblue shadow-lg disabled:opacity-25 hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"
             >
               Kirim
             </button>
