@@ -12,7 +12,10 @@ const useAudio = (url: string) => {
     }
     if (audio) {
       return playing
-        ? audio?.play().then(() => console.log('Playback resumed successfully'))
+        ? audio
+            ?.play()
+            .then(() => console.log('Playback resumed successfully'))
+            .catch((e) => alert(e))
         : audio?.pause();
     }
   }, [audio, playing]);
