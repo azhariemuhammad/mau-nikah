@@ -1,27 +1,23 @@
 import { useCallback, useEffect, useState } from 'react';
 import { AUDIO_1 } from 'constants/index.js';
 const useAudio = (url: string) => {
-  const [audio, setAudio] = useState(AUDIO_1);
+  const [audio, setAudio] = useState<HTMLAudioElement>();
   const [playing, setPlaying] = useState(true);
 
   const toggle = () => setPlaying(!playing);
 
   const player = useCallback(() => {
     if (!audio) {
-      // @ts-ignore
-      setAudio(new Audio(url || ''));
+      setAudio(new Audio(AUDIO_1 || ''));
     }
     if (audio) {
-      // @ts-ignore
       audio.load();
       return playing
         ? audio
-            // @ts-ignore
             ?.play()
             .then(() => console.log('Playback resumed successfully'))
-            .catch((e: unknown) => alert(e))
-        : // @ts-ignore
-          audio?.pause();
+            .catch((e) => alert(e))
+        : audio?.pause();
     }
   }, [audio, playing]);
   // @ts-ignore
