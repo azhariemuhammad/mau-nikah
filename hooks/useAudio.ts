@@ -9,6 +9,8 @@ const useAudio = (url: string) => {
   const player = useCallback(() => {
     if (!audio) {
       setAudio(new Audio(url || ''));
+      // @ts-ignore
+      audio?.load();
     }
     if (audio) {
       return playing
