@@ -7,7 +7,8 @@
       "@/components/*": ["components/*"],
       "@/public/*": ["public/*"],
       "@/hooks/*": ["hooks/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
