@@ -9,9 +9,11 @@ const useAudio = () => {
     const audio = document.getElementById('myAudio') as HTMLAudioElement;
 
     if (audio) {
+      // @ts-ignore
       audio.load();
       return playing
         ? audio
+            // @ts-ignore
             ?.play()
             .then(() => console.log('Playback resumed successfully'))
             .catch((e) => console.error(e))
