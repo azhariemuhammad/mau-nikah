@@ -43,7 +43,7 @@ const BrideInfo = (props: BrideInfo) => {
           </div>
         )}
         <div className="py-8" data-aos="fade-up">
-          <i className={`text-2xl text-zinc-900 font-bold `}>{fullnameWomen}</i>
+          <p className={`text-2xl text-zinc-900 font-bold `}>{fullnameWomen}</p>
           <p className="text-sm text-zinc-500">Putri tercinta</p>
           <p className="text-md text-zinc-500">Bapak {fatherNameWomen}</p>
           <p className="text-md text-zinc-500">Ibu {motherNameWomen}</p>
@@ -70,7 +70,7 @@ const BrideInfo = (props: BrideInfo) => {
           </div>
         )}
         <div className="py-8" data-aos="fade-up">
-          <i className="text-2xl font-bold text-zinc-900">{fullnameMan}</i>
+          <p className="text-2xl font-bold text-zinc-900">{fullnameMan}</p>
           <p className="text-sm text-zinc-500">Putra tercinta</p>
           <p className="text-md text-zinc-500">Bapak {fatherNameMan}</p>
           <p className="text-md text-zinc-500">Ibu {motherNameMan}</p>

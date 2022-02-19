@@ -28,7 +28,7 @@ Boleh tanya untuk price list undangan websitenya ☺`);
       </div>
       <Image src={copyright} width={11} height={12} />
       <p className="text-white text-sm text-center">
-        © 2022 Undangan nikah online by nikahariini
+        © 2022 Undangan nikah online by nikahhariini
       </p>
     </div>
   );
