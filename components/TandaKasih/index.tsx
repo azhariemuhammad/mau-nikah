@@ -6,7 +6,6 @@ import styles from '@/styles/Home.module.css';
 const TandaKasihComponent = () => {
   return (
     <div id="tanda-kasih" className="mt-4 text-center">
-      {/* <div className={styles.shadow__custom}> */}
       <h3 className="text-4xl mb-8 pt-5 text-slate-800 font-sacramento">
         Tanda Kasih
       </h3>
@@ -18,7 +17,7 @@ const TandaKasihComponent = () => {
       </p>
       <br />
       <p>Wassalamualaikum Warahmatullahi Wabarakatuh.</p>
-      {/* </div> */}
+
       <div className={`mt-8 ${styles.shadow__custom}`}>
         <div style={{ width: '100%', height: '350px', position: 'relative' }}>
           <Image

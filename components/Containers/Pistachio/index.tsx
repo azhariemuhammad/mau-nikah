@@ -41,13 +41,11 @@ const PistachioContainer = ({ weddData, isOpenModal }: WeddData) => {
   const mainEventDate = useMemo(() => {
     if (rundowns.length) {
       const mainEvent = rundowns.find((item) => item.is_main_event == true);
-      console.log({ mainEvent });
       return mainEvent as Rundown;
     }
     return {} as Rundown;
   }, [rundowns]);
 
-  console.log({ isOpenModal }, 'container');
   return (
     <>
       <TopBannerPistachio

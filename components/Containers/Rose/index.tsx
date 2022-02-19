@@ -3,13 +3,9 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 
-import divider from '@/public/icons/divider.svg';
-
 import styles from '@/styles/Home.module.css';
-import MetaHeadComponent from '@/components/MetaHead';
 
 import CountdownTimer from '@/components/CountdownTimer';
-import WelcomePage from '@/components/WelcomePage';
 
 import Footer from '@/components/Footer';
 import TopBannerRose from '@/components/TopBanner/Rose';
@@ -20,7 +16,6 @@ import BrideInfo from '@/components/BrideInfo';
 import RundownComponent from '@/components/Rundown';
 import Gallery from '@/components/Gallery';
 import BrideRelativesInfo from '@/components/BrideRelativesInfo';
-import TopBannerPistachio from '@/components/TopBanner/Pistachio';
 
 const RoseContainer = ({ weddData }: WeddData) => {
   const cardVariants: Variants = {
@@ -31,11 +26,6 @@ const RoseContainer = ({ weddData }: WeddData) => {
       x: 0,
       rotate: -10,
       transition: { duration: 1, type: 'tween' },
-      // transition: {
-      //   type: 'spring',
-      //   bounce: 0.4,
-      //   duration: 0.8,
-      // },
     },
   };
 
@@ -51,7 +41,6 @@ const RoseContainer = ({ weddData }: WeddData) => {
     photos,
     nickname_women,
     nickname_man,
-    slug,
     audio_url,
     avatar_men,
     avatar_women,

@@ -4,7 +4,6 @@ import LoveIcon from '@/public/icons/love.svg';
 import { Message } from '@/components/Containers/interface';
 import styles from '@/styles/Home.module.css';
 import { locale } from 'locale';
-// import { randomIntFromRange } from 'helpers/randomNumberRange';
 
 dayjs.locale(locale as ILocale);
 

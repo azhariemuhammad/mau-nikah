@@ -9,10 +9,8 @@ const useAudio = (url: string) => {
   const player = useCallback(() => {
     if (!audio) {
       setAudio(new Audio(url || ''));
-      console.log({ audio, url });
     }
     if (audio) {
-      console.log('masuk sini', audio);
       return playing
         ? audio?.play().then(() => console.log('Playback resumed successfully'))
         : audio?.pause();

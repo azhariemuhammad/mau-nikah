@@ -22,7 +22,6 @@ const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
   const [messages, setMessages] = useState<Array<Message>>(result);
   const firstLoad = useRef(false);
 
-  console.log({ count });
   useEffect(() => {
     if (result.length && !error) {
       setMessages(result);

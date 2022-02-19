@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Gallery = (props: { photos: Array<string> }) => {
   const photos = props.photos;
   const images = useMemo(() => normalizePhotos(photos), [photos]);
-  console.log({ images });
+
   if (!images.length) return null;
 
   return (

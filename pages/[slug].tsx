@@ -21,9 +21,6 @@ interface InvitationResponse {
 const InvitationPage = ({ response }: InvitationResponse) => {
   const router = useRouter();
   const { data = [] } = response || {};
-  console.log({ response });
-
-  console.log({ data: data[0] });
 
   if (!data.length) {
     return (

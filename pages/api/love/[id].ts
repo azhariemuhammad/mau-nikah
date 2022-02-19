@@ -12,15 +12,14 @@ const getPagination = (page: number, size: number) => {
 const getWallOfLove = nextConnect()
   .get(async (req, res) => {
     try {
-      console.log({ req });
       const {
         // @ts-ignore
         query: { id, page },
       } = req;
-      console.log({ id, page });
+
       const pagination = getPagination(Number(page), 5);
       const response = await getLove(Number(id), pagination);
-      console.log({ response });
+
       // @ts-ignore
       res.status(200).json(response);
     } catch (e) {

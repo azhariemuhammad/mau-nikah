@@ -42,9 +42,6 @@ const SendingLove = ({ weddingId, onsubmit }: SendingLoveProps) => {
   const isDisabled = message.length < 3 || sender.length < 3;
   return (
     <>
-      {/* <h3 className="text-4xl text-center mb-8 pt-5 text-pink-800 font-sacramento">
-        Kirim Ucapan &amp; Doa
-      </h3> */}
       <div className={`my-8 ${styles.shadow__custom}`}>
         <form>
           <div className="mt-2">

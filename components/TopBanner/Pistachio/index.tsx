@@ -14,7 +14,6 @@ const TopBannerPistachio = ({
   mainBanner,
   isOpenModal,
 }: TopBannerProps) => {
-  console.log({ isOpenModal });
   return (
     <>
       <div className="bg-red">

@@ -18,7 +18,7 @@ interface Event {
 }
 const EventDetail = (props: Event) => {
   const { eventName, eventDateStart, eventDateEnd, pinPoint, address } = props;
-  console.log({ eventDateStart });
+
   return (
     <>
       <div className="py-1">
