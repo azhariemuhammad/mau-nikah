@@ -10,6 +10,10 @@
   stroke: #5388b7;
 }
 
+.loading__heart[data-variant='olive'] {
+  stroke: #99a799;
+}
+
 .loading__heart path {
   stroke-dashoffset: 0;
   stroke-dasharray: 1550;

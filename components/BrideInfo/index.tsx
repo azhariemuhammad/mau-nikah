@@ -43,19 +43,17 @@ const BrideInfo = (props: BrideInfo) => {
           </div>
         )}
         <div className="py-8" data-aos="fade-up">
-          <i className={`text-3xl text-zinc-900 font-bold font-sacramento`}>
-            {fullnameWomen}
-          </i>
-          <p className="text-sm">Putri tercinta</p>
-          <p className="text-md">Bapak {fatherNameWomen}</p>
-          <p className="text-md">Ibu {motherNameWomen}</p>
+          <i className={`text-2xl text-zinc-900 font-bold `}>{fullnameWomen}</i>
+          <p className="text-sm text-zinc-500">Putri tercinta</p>
+          <p className="text-md text-zinc-500">Bapak {fatherNameWomen}</p>
+          <p className="text-md text-zinc-500">Ibu {motherNameWomen}</p>
         </div>
       </div>
       {/* <h3 className="text-5xl font-bold text-pink-800">
 
               </h3> */}
       <div className="mb-[2rem]">
-        <LoaderLove bgColor="oceanblue" />
+        <LoaderLove bgColor="olive" />
       </div>
       <div id="couple-2" data-aos="fade-right">
         {avatarMen && (
@@ -72,12 +70,10 @@ const BrideInfo = (props: BrideInfo) => {
           </div>
         )}
         <div className="py-8" data-aos="fade-up">
-          <i className="text-3xl font-bold font-sacramento text-zinc-900">
-            {fullnameMan}
-          </i>
-          <p className="text-sm">Putra tercinta</p>
-          <p className="text-md">Bapak {fatherNameMan}</p>
-          <p className="text-md">Ibu {motherNameMan}</p>
+          <i className="text-2xl font-bold text-zinc-900">{fullnameMan}</i>
+          <p className="text-sm text-zinc-500">Putra tercinta</p>
+          <p className="text-md text-zinc-500">Bapak {fatherNameMan}</p>
+          <p className="text-md text-zinc-500">Ibu {motherNameMan}</p>
         </div>
       </div>
     </>
