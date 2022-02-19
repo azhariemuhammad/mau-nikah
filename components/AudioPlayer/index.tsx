@@ -1,9 +1,9 @@
 import useAudio from '@/hooks/useAudio';
-import { AUDIO_1 } from '../../constants';
+
 import styles from './audio.module.css';
 
 const AudioPlayer = ({ audioUrl }: { audioUrl: string }) => {
-  const { playing, toggle } = useAudio(audioUrl || '');
+  const { playing, toggle } = useAudio();
 
   return (
     <>
