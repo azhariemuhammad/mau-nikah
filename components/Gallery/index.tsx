@@ -25,7 +25,7 @@ const Gallery = (props: { photos: Array<string> }) => {
             alt="avatar"
             layout="fill"
             // width={100}
-            objectFit="fill"
+            objectFit="cover"
             // height={100}
           />
         </div>
