@@ -41,8 +41,9 @@ const BrideInfo = (props: BrideInfo) => {
           >
             <Image
               src={avatarWomen}
-              width={256}
-              height={256}
+              width={150}
+              height={150}
+              layout="fixed"
               className="rounded-full"
             />
           </div>
@@ -69,8 +70,9 @@ const BrideInfo = (props: BrideInfo) => {
           >
             <Image
               src={avatarMen}
-              width={256}
-              height={256}
+              width={150}
+              height={150}
+              layout="fixed"
               className="rounded-full"
             />
           </div>

@@ -42,33 +42,35 @@ const WelcomePage = ({
           styles.modal
         } ${isOpen ? styles.shown : ''}`}
       >
-        <div className="mb-8">
-          <h5 className="text-white">KEPADA BAPAK/IBU/SAUDARA/I</h5>
-          <h5 className="text-bold text-white text-2xl mb-1">
-            {capitalizeEachWord(guest)}
-          </h5>
-          <p className="text-white">
-            Dengan senang hati mengundang Anda untuk hadir di hari pernikahan
-            kami
-          </p>
+        <div className="absolute inset-x-0 bottom-20">
+          <div className="mb-8">
+            <h5 className="text-white">KEPADA BAPAK/IBU/SAUDARA/I</h5>
+            <h5 className="text-bold text-white text-2xl mb-1">
+              {capitalizeEachWord(guest)}
+            </h5>
+            <p className="text-white">
+              Dengan senang hati mengundang Anda untuk hadir di hari pernikahan
+              kami
+            </p>
 
-          <h1 className="text-5xl font-bold font-reey text-white text-center mt-5">
-            {nicknameWomen}
-          </h1>
-          <h1 className="text-5xl font-bold font-reey text-white text-center">
-            &amp;
-          </h1>
-          <h1 className="text-5xl font-bold font-reey text-white text-center">
-            {nicknameMan}
-          </h1>
-        </div>
-        <div className="mt-8">
-          <button
-            className="rounded-full bg-oceanblue text-white h-[32px] w-[170px]"
-            onClick={handleOpenInvitation}
-          >
-            Buka Undangan
-          </button>
+            <h1 className="text-3xl font-bold font-reey text-white text-center mt-5">
+              {nicknameWomen}
+            </h1>
+            <h1 className="text-3xl font-bold font-reey text-white text-center">
+              &amp;
+            </h1>
+            <h1 className="text-3xl font-bold font-reey text-white text-center">
+              {nicknameMan}
+            </h1>
+          </div>
+          <div className="mt-8">
+            <button
+              className="rounded-full bg-olive text-white h-[40px] w-[170px]"
+              onClick={handleOpenInvitation}
+            >
+              Buka Undangan
+            </button>
+          </div>
         </div>
       </div>
     </>
