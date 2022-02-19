@@ -31,14 +31,14 @@ const BrideInfo = (props: BrideInfo) => {
       <div id="couple-1" data-aos="fade-right">
         {avatarWomen && (
           <div
-            className={`w-full rounded-lg shadow-md  max-w-[256px] ${styles.avatar__wrapper}`}
+            className={`w-full rounded-full shadow-md  max-w-[256px] ${styles.avatar__wrapper}`}
           >
             <Image
               src={avatarWomen}
               width={150}
               height={150}
               layout="responsive"
-              className="rounded-lg shadow-md"
+              className="rounded-full shadow-md"
             />
           </div>
         )}
@@ -60,14 +60,14 @@ const BrideInfo = (props: BrideInfo) => {
       <div id="couple-2" data-aos="fade-right">
         {avatarMen && (
           <div
-            className={`w-full rounded-lg shadow-md max-w-[256px] ${styles.avatar__wrapper}`}
+            className={`w-full rounded-full shadow-md max-w-[256px] ${styles.avatar__wrapper}`}
           >
             <Image
               src={avatarMen}
               width={150}
               height={150}
               layout="responsive"
-              className="rounded-lg shadow-md"
+              className="rounded-full shadow-md"
             />
           </div>
         )}
