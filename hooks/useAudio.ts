@@ -9,6 +9,7 @@ const useAudio = () => {
     const audio = document.getElementById('myAudio') as HTMLAudioElement;
 
     if (audio) {
+      audio.load();
       return playing
         ? audio
             ?.play()
