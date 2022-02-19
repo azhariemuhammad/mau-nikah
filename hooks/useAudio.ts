@@ -8,7 +8,6 @@ const useAudio = () => {
   const player = useCallback(() => {
     const audio = document.getElementById('myAudio') as HTMLAudioElement;
     if (audio) {
-      // audio.load();
       return playing
         ? audio
             ?.play()
@@ -17,6 +16,7 @@ const useAudio = () => {
         : audio?.pause();
     }
   }, [playing]);
+
   // @ts-ignore
   useEffect(() => player(), [player]);
 
