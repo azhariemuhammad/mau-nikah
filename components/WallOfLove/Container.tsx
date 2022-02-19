@@ -4,11 +4,14 @@ import WallOfLove from '.';
 import SendingLove from './SendingLove';
 import { Message } from '@/components/Containers/interface';
 import postLove from 'models/postLove';
+import { randomIntFromRange } from 'helpers/randomNumberRange';
 import { useEffect, useRef, useState } from 'react';
 
 interface ContainerWallOfLoveProps {
   weddingId: number;
 }
+const variants = ['indigo-500', 'sky-500', 'purple-500'];
+
 const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
   const [curentPage, setCurrentPage] = useState(0);
   const { result, error, count } = useGetWallOfLove(
@@ -58,9 +61,17 @@ const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
 
       {messages.length > 0 &&
         !error &&
-        messages.map((item: Message) => (
-          <WallOfLove message={item} key={item.id} />
-        ))}
+        messages.map((item: Message) => {
+          // const rand = randomIntFromRange(0, 2);
+          // console.log({ rand });
+          // const randomBg = variants[rand];
+          // // console.log({ randomBg });
+          // // const variant = {
+          // //   background: `rounded-full bg-${randomBg} shadow-lg shadow-${randomBg}/50`,
+          // //   shadow: randomBg,
+          // // };
+          return <WallOfLove message={item} key={item.id} />;
+        })}
       <div className="text-center my-4">
         {messages.length < count && (
           <button

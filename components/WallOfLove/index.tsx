@@ -4,7 +4,7 @@ import LoveIcon from '@/public/icons/love.svg';
 import { Message } from '@/components/Containers/interface';
 import styles from '@/styles/Home.module.css';
 import { locale } from 'locale';
-import { randomIntFromRange } from 'helpers/randomNumberRange';
+// import { randomIntFromRange } from 'helpers/randomNumberRange';
 
 dayjs.locale(locale as ILocale);
 
@@ -12,17 +12,14 @@ interface WallOfLoveProps {
   message: Message;
 }
 
-const variants = ['indigo-500', 'sky-500', 'purple-500'];
 const WallOfLove = ({ message }: WallOfLoveProps) => {
-  const rand = randomIntFromRange(0, 2);
-  const randomBg = variants[rand];
   return (
     <>
       <li className="text-sm mb-2 leading-6 list-none">
         <div className={` ${styles.shadow__custom}`}>
           <div className="flex">
             <div
-              className={`rounded-full bg-${randomBg} shadow-lg shadow-${randomBg}/50`}
+              className={`rounded-full bg-sky-500 shadow-lg shadow-sky-500/50`}
               style={{ width: '50px', height: '48px', padding: '15px' }}
             >
               <div
