@@ -1,25 +1,28 @@
 import { useCallback, useEffect, useState } from 'react';
 
-const useAudio = (url: string) => {
-  const [audio, setAudio] = useState<HTMLAudioElement>();
+const useAudio = () => {
   const [playing, setPlaying] = useState(true);
 
   const toggle = () => setPlaying(!playing);
 
   const player = useCallback(() => {
-    if (!audio) {
-      setAudio(new Audio(url || ''));
-    }
+    const audio = document.getElementById('myAudio') as HTMLAudioElement;
+
     if (audio) {
       return playing
-        ? audio?.play().then(() => console.log('Playback resumed successfully'))
+        ? audio
+            ?.play()
+            .then(() => console.log('Playback resumed successfully'))
+            .catch((e) => console.error(e))
         : audio?.pause();
     }
-  }, [audio, playing]);
+  }, [playing]);
+
   // @ts-ignore
   useEffect(() => player(), [player]);
 
   useEffect(() => {
+    const audio = document.getElementById('myAudio') as HTMLAudioElement;
     if (!audio) return;
     audio.addEventListener('ended', () => setPlaying(false));
     return () => {
