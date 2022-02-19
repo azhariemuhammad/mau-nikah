@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
 
 import MetaHeadComponent from '@/components/MetaHead';
 
@@ -16,6 +17,10 @@ const Invitation = ({ weddData }: WeddData) => {
   const handleOpenInvitation = () => {
     setOpenModal(true);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, [AOS]);
 
   return (
     <>

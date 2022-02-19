@@ -15,7 +15,7 @@ interface WallOfLoveProps {
 const WallOfLove = ({ message }: WallOfLoveProps) => {
   return (
     <>
-      <li className="text-sm mb-2 leading-6 list-none">
+      <li className="text-sm mb-2 leading-6 list-none" data-aos="fade-bottom">
         <div className={` ${styles.shadow__custom}`}>
           <div className="flex">
             <div

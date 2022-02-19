@@ -2,8 +2,6 @@ import LoaderLove from '@/components/Loader';
 
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
-import AOS from 'aos';
-import { useEffect } from 'react';
 
 interface BrideInfo {
   fullnameMan: string;
@@ -27,10 +25,6 @@ const BrideInfo = (props: BrideInfo) => {
     avatarMen,
     avatarWomen,
   } = props;
-
-  useEffect(() => {
-    AOS.init();
-  }, [AOS]);
 
   return (
     <>

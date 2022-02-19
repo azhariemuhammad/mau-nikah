@@ -1,5 +1,4 @@
 import dayjs from 'dayjs';
-import AOS from 'aos';
 
 import { Rundown, WeddData } from '@/components/Containers/interface';
 import TopBannerPistachio from '@/components/TopBanner/Pistachio';
@@ -12,7 +11,7 @@ import RundownComponent from '@/components/Rundown';
 import Gallery from '@/components/Gallery';
 import BrideRelativesInfo from '@/components/BrideRelativesInfo';
 import TandaKasihComponent from '@/components/TandaKasih';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { locale } from 'locale';
 import ContainerWallOfLove from '@/components/WallOfLove/Container';
 import Footer from '@/components/Footer';
@@ -38,12 +37,6 @@ const PistachioContainer = ({ weddData, isOpenModal }: WeddData) => {
     rundowns,
     id,
   } = weddData || {};
-
-  // const eventDate = '02/26/2022';
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   const mainEventDate = useMemo(() => {
     if (rundowns.length) {
