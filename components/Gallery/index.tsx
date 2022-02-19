@@ -9,7 +9,7 @@ const Gallery = (props: { photos: Array<string> }) => {
   if (!images.length) return null;
   return (
     <div className="text-center pt-[2rem]">
-      <h3 className="text-4xl mb-8 pt-5 text-pink-800 font-sacramento">
+      <h3 className="text-4xl mb-8 pt-5 text-slate-800 font-sacramento">
         Gallery
       </h3>
       <Carousel options={{ autoplay: 2000 }}>

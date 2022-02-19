@@ -76,7 +76,7 @@ const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
         {messages.length < count && (
           <button
             type="button"
-            className="bg-oceanblue shadow-lg  hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"
+            className="bg-olive shadow-lg  hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"
             onClick={handleLoadMore}
           >
             Selanjutnya

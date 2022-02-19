@@ -16,7 +16,7 @@ module.exports = {
       colors: {
         redrose: '#FB7185',
         oceanblue: '#5388B7',
-        olive: '#ADC2A9',
+        olive: '#99a799',
         white: '#ffff',
       },
     },

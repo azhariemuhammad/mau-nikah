@@ -105,6 +105,7 @@ const RoseContainer = ({ weddData }: WeddData) => {
             <BrideRelativesInfo
               manRelative={weddData.man_relatives}
               womenRelative={weddData.women_relatives}
+              bgColor="white"
             />
             <Gallery photos={photos} />
           </main>

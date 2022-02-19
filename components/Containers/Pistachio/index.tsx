@@ -78,14 +78,14 @@ const PistachioContainer = ({ weddData }: WeddData) => {
               </p>
             </div>
             <div className="mt-[30px]">
-              <button className="rounded-md p-2 text-white bg-oceanblue">
+              <button className="rounded-md p-2 text-white bg-olive">
                 Save the Date
               </button>
             </div>
             <div className="mt-[24px]">
               <CountdownTimer
                 eventDate={mainEventDate.event_date_start}
-                bgColor="oceanblue"
+                bgColor="olive"
               />
             </div>
             <Opening />
@@ -100,24 +100,25 @@ const PistachioContainer = ({ weddData }: WeddData) => {
               avatarWomen={avatar_women}
               bgColor="oceanblue"
             />
+            <div className="text-center p-8">
+              <p data-aos="fade-up">
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+                Bapak/Ibu/Saudara/i berkenan hadir dan memberikan Doa restu
+                kepada kedua mempelai
+              </p>
+            </div>
           </main>
         </div>
       </div>
-      <div className="text-center p-8">
-        <p data-aos="fade-up">
-          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
-          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan Doa restu kepada
-          kedua mempelai
-        </p>
-      </div>
       <div className="bg-[#ffff] max-w-[640px] m-auto">
         <div className={styles.container}>
-          <Surah bgColor="oceanblue" />
+          <Surah bgColor="olive" />
           <RundownComponent rundown={weddData.rundowns} />
 
           <BrideRelativesInfo
             manRelative={weddData.man_relatives}
             womenRelative={weddData.women_relatives}
+            bgColor="white"
           />
           <div className="my-[40px]">
             <Gallery photos={photos} />
@@ -125,7 +126,7 @@ const PistachioContainer = ({ weddData }: WeddData) => {
           <div className="my-[40px]">
             <TandaKasihComponent />
           </div>
-          <h3 className="text-4xl text-center mb-8 pt-5 text-pink-800 font-sacramento">
+          <h3 className="text-4xl text-center mb-8 pt-5 text-slate-800 font-sacramento">
             Wall of Love
           </h3>
           <ContainerWallOfLove weddingId={id} />

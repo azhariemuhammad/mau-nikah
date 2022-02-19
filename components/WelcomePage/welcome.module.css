@@ -5,9 +5,10 @@
 }
 
 .modal {
-  background-image: url('https://user-images.githubusercontent.com/19600009/154477542-43a257fb-ef01-4d78-9f75-59d30d8647bf.jpg');
+  background-image: url('https://user-images.githubusercontent.com/19600009/154786919-7e654fca-f736-42ae-9a04-5cc072b242a1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: right;
   /* background-color: rgba(0, 0, 0, 0); */
   height: 100%;
   width: 100%;
