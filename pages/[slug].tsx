@@ -19,7 +19,6 @@ interface InvitationResponse {
   };
 }
 const InvitationPage = ({ response }: InvitationResponse) => {
-  const router = useRouter();
   const { data = [] } = response || {};
 
   if (!data.length) {

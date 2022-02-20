@@ -1,7 +1,7 @@
 import nextConnect from 'next-connect';
 import getLove from 'models/getLove';
 
-const getPagination = (page: number, size: number) => {
+const getPagination = (page: number, size = 5) => {
   const limit = size ? +size : 3;
   const from = page ? page * limit : 0;
   const to = page ? from + size - 1 : size - 1;
@@ -14,10 +14,11 @@ const getWallOfLove = nextConnect()
     try {
       const {
         // @ts-ignore
-        query: { id, page },
+        query: { id, page, size },
       } = req;
 
-      const pagination = getPagination(Number(page), 5);
+      const pagination = getPagination(Number(page), Number(size));
+
       const response = await getLove(Number(id), pagination);
 
       // @ts-ignore

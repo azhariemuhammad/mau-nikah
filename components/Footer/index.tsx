@@ -12,7 +12,7 @@ Boleh tanya untuk price list undangan websitenya ☺`);
   const phoneNumber = `6282248467118`;
   const formatText = `${baseWhatsappLink}/${phoneNumber}?text=${text}`;
   return (
-    <div className="bg-[#334257] p-12">
+    <div className="bg-[#334257] p-12 mt-[60px]">
       <h2 className="text-3xl text-center text-fuchsia-500 font-sacramento">
         NikahHariIni
       </h2>

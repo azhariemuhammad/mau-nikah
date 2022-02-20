@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { useSWRConfig } from 'swr';
 import useGetWallOfLove from '@/hooks/useGetWallOfLove';
 import WallOfLove from '.';
@@ -5,7 +7,6 @@ import SendingLove from './SendingLove';
 import { Message } from '@/components/Containers/interface';
 import postLove from 'models/postLove';
 import { randomIntFromRange } from 'helpers/randomNumberRange';
-import { useEffect, useRef, useState } from 'react';
 
 interface ContainerWallOfLoveProps {
   weddingId: number;
@@ -13,19 +14,18 @@ interface ContainerWallOfLoveProps {
 const variants = ['indigo-500', 'sky-500', 'purple-500'];
 
 const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
-  const [curentPage, setCurrentPage] = useState(0);
+  const [curentPage] = useState(0);
+  const router = useRouter();
   const { result, error, count } = useGetWallOfLove(
-    `/api/love/${weddingId}?page=${curentPage}`
+    `/api/love/${weddingId}?page=${curentPage}&size=5`
   );
   const { mutate } = useSWRConfig();
   const [key, setKey] = useState(0);
   const [messages, setMessages] = useState<Array<Message>>(result);
-  const firstLoad = useRef(false);
 
   useEffect(() => {
     if (result.length && !error) {
       setMessages(result);
-      firstLoad.current = true;
     }
   }, [result]);
 
@@ -49,7 +49,7 @@ const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
   };
 
   const handleLoadMore = () => {
-    setCurrentPage(curentPage + 1);
+    router.push(`/wall-of-love/${weddingId}`);
   };
 
   return (
@@ -78,7 +78,7 @@ const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
             className="bg-olive shadow-lg  hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"
             onClick={handleLoadMore}
           >
-            Selanjutnya
+            Lihat lebih banyak
           </button>
         )}
       </div>

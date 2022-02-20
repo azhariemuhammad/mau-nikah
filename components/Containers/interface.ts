@@ -51,6 +51,9 @@ export interface Message {
   wedding_id: number;
   sender: string;
   sender_description: string;
+  is_attend?: boolean;
+  is_brides_guest?: boolean | null;
+  is_grooms_guest?: boolean | null;
 }
 
 export interface WallOfLove {
