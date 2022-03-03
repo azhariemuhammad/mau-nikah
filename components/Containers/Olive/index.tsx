@@ -51,28 +51,34 @@ const OliveContainer = ({ weddData, isOpenModal }: WeddData) => {
 
   return (
     <>
-      <div className="z-10">
-        <TopBannerPistachio
-          audioUrl={audio_url}
-          mainBanner={bride_main_banner}
-          nicknameWomen={nickname_women}
-          nicknameMan={nickname_man}
-          isOpenModal={isOpenModal || false}
-        />
-      </div>
-      {/* <div className="relative"> */}
-      <div className="fixed top-0 h-screen w-full">
-        <Image src={PageImage} alt="page image" layout="fill" />
-      </div>
-      {/* </div> */}
+      <TopBannerPistachio
+        audioUrl={audio_url}
+        mainBanner={bride_main_banner}
+        nicknameWomen={nickname_women}
+        nicknameMan={nickname_man}
+        isOpenModal={isOpenModal || false}
+      />
       <div className="bg-base-100 max-w-[640px] m-auto">
         <div className={styles.container}>
-          <main className="text-center z-10 relative">
-            <TopInfo
-              nicknameMan={nickname_man}
-              nicknameWomen={nickname_women}
-              mainEventDate={mainEventDate}
-            />
+          <main className="text-center">
+            <div className="text-center mb-[2rem] pt-[3rem]">
+              <p className="text-3xl  font-bold font-reey">
+                {nickname_man} &amp; {nickname_women}
+              </p>
+            </div>
+            <div className="pt-[2rem]">
+              <p className="font-bold italic">Undangan pernikahan</p>
+              <p className="font-bold italic">
+                {dayjs(mainEventDate.event_date_start).format(
+                  'dddd, DD MMMM YYYY'
+                )}
+              </p>
+            </div>
+            <div className="mt-[30px]">
+              <button className="rounded-md p-2 text-white bg-primary">
+                Save the Date
+              </button>
+            </div>
             <div className="mt-[24px]">
               <CountdownTimer
                 eventDate={mainEventDate.event_date_start}
@@ -101,7 +107,7 @@ const OliveContainer = ({ weddData, isOpenModal }: WeddData) => {
           </main>
         </div>
       </div>
-      <div className="bg-base-100 max-w-[640px] m-auto z-10">
+      <div className="bg-base-100 max-w-[640px] m-auto">
         <div className={styles.container}>
           <Surah bgColor="primary" />
           <RundownComponent rundown={weddData.rundowns} />
