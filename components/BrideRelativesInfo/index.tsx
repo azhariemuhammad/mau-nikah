@@ -30,7 +30,7 @@ const BrideRelativesInfo = (props: BrideRelatives) => {
         <h3 className="text-4xl mb-8 text-slate-800 font-sacramento">
           Turut Mengundang
         </h3>
-        <h5 className="text-lime-800">KELUARGA MEMPELAI LAKI-LAKI</h5>
+        <h5 className="text-secondary">KELUARGA MEMPELAI LAKI-LAKI</h5>
         {manRelativeNormalized.map((item) => (
           <p key={item.id} className="text-slate">
             {capitalizeEachWord(item.relative)}
@@ -38,7 +38,7 @@ const BrideRelativesInfo = (props: BrideRelatives) => {
         ))}
       </div>
       <div className="py-5">
-        <h5 className="text-lime-800">KELUARGA MEMPELAI PEREMPUAN</h5>
+        <h5 className="text-secondary">KELUARGA MEMPELAI PEREMPUAN</h5>
         {womenRelativeNormalized.map((item) => (
           <p key={item.id} className="text-slate">
             {capitalizeEachWord(item.relative)}

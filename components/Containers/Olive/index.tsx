@@ -18,7 +18,7 @@ import Footer from '@/components/Footer';
 
 dayjs.locale(locale as ILocale);
 
-const PistachioContainer = ({ weddData, isOpenModal }: WeddData) => {
+const OliveContainer = ({ weddData, isOpenModal }: WeddData) => {
   const {
     fullname_man,
     fullname_women,
@@ -55,7 +55,7 @@ const PistachioContainer = ({ weddData, isOpenModal }: WeddData) => {
         nicknameMan={nickname_man}
         isOpenModal={isOpenModal || false}
       />
-      <div className="bg-[#ffff] max-w-[640px] m-auto">
+      <div className="bg-base-100 max-w-[640px] m-auto">
         <div className={styles.container}>
           <main className="text-center">
             <div className="text-center mb-[2rem] pt-[3rem]">
@@ -72,14 +72,14 @@ const PistachioContainer = ({ weddData, isOpenModal }: WeddData) => {
               </p>
             </div>
             <div className="mt-[30px]">
-              <button className="rounded-md p-2 text-white bg-olive">
+              <button className="rounded-md p-2 text-white bg-primary">
                 Save the Date
               </button>
             </div>
             <div className="mt-[24px]">
               <CountdownTimer
                 eventDate={mainEventDate.event_date_start}
-                bgColor="olive"
+                bgColor="primary"
               />
             </div>
             <Opening />
@@ -104,9 +104,9 @@ const PistachioContainer = ({ weddData, isOpenModal }: WeddData) => {
           </main>
         </div>
       </div>
-      <div className="bg-[#ffff] max-w-[640px] m-auto">
+      <div className="bg-base-100 max-w-[640px] m-auto">
         <div className={styles.container}>
-          <Surah bgColor="olive" />
+          <Surah bgColor="primary" />
           <RundownComponent rundown={weddData.rundowns} />
 
           <BrideRelativesInfo
@@ -131,4 +131,4 @@ const PistachioContainer = ({ weddData, isOpenModal }: WeddData) => {
   );
 };
 
-export default PistachioContainer;
+export default OliveContainer;

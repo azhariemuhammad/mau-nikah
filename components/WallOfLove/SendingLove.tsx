@@ -107,7 +107,7 @@ const SendingLove = ({ weddingId, onsubmit }: SendingLoveProps) => {
               disabled={isDisabled || progress === 'sending'}
               onClick={handleSendingLove}
               type="button"
-              className="bg-olive shadow-lg disabled:opacity-50 hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"
+              className="bg-primary shadow-lg disabled:opacity-50 hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"
             >
               Kirim
             </button>

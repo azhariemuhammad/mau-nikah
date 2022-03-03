@@ -10,7 +10,7 @@ const AudioPlayer = ({ audioUrl }: { audioUrl: string }) => {
       <audio preload="auto" id="myAudio">
         <source src={audioUrl} />
       </audio>
-      <a onClick={toggle} className={styles.audio__btn}>
+      <a onClick={toggle} className={`${styles.audio__btn} bg-primary`}>
         {!playing ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -6,6 +6,27 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  daisyui: {
+    themes: [
+      {
+        olive: {
+          primary: '#99a799',
+          secondary: 'rgb(63 98 18)',
+          accent: '#37cdbe',
+          neutral: '#3d4451',
+          'base-100': '#ffff',
+        },
+        rose: {
+          primary: 'rgb(127 29 29)',
+          secondary: 'rgb(248 113 113)',
+          accent: '#37cdbe',
+          neutral: '#3d4451',
+          'base-100': '#ffff',
+        },
+      },
+      'light',
+    ],
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -21,5 +42,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };

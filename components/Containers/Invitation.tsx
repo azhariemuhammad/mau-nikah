@@ -7,7 +7,7 @@ import WelcomePage from '@/components/WelcomePage';
 
 import { WeddData } from './interface';
 import RoseContainer from './Rose';
-import PistachioContainer from './Pistachio';
+import OliveContainer from './Olive';
 
 const Invitation = ({ weddData }: WeddData) => {
   const [isOpenModal, setOpenModal] = useState(false);
@@ -22,22 +22,31 @@ const Invitation = ({ weddData }: WeddData) => {
     AOS.init();
   }, [AOS]);
 
+  const curentTheme = theme === 'pistachio' ? 'olive' : 'rose';
+
   return (
     <>
       <MetaHeadComponent meta={weddData.meta} slug={slug} />
-
-      <WelcomePage
-        isOpen={isOpenModal}
-        handleOpenInvitation={handleOpenInvitation}
-        meta={weddData.meta}
-        nicknameMan={nickname_man}
-        nicknameWomen={nickname_women}
-        slug={slug}
-      />
+      <div data-theme={curentTheme}>
+        <WelcomePage
+          isOpen={isOpenModal}
+          handleOpenInvitation={handleOpenInvitation}
+          meta={weddData.meta}
+          nicknameMan={nickname_man}
+          nicknameWomen={nickname_women}
+          slug={slug}
+        />
+      </div>
       {theme === 'pistachio' && (
-        <PistachioContainer weddData={weddData} isOpenModal={isOpenModal} />
+        <div data-theme={curentTheme}>
+          <OliveContainer weddData={weddData} isOpenModal={isOpenModal} />
+        </div>
       )}
-      {theme === 'rose' && <RoseContainer weddData={weddData} />}
+      {theme === 'rose' && (
+        <div data-theme={curentTheme}>
+          <RoseContainer weddData={weddData} />
+        </div>
+      )}
     </>
   );
 };

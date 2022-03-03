@@ -18,17 +18,6 @@ import Gallery from '@/components/Gallery';
 import BrideRelativesInfo from '@/components/BrideRelativesInfo';
 
 const RoseContainer = ({ weddData }: WeddData) => {
-  const cardVariants: Variants = {
-    offscreen: {
-      x: 1000,
-    },
-    onscreen: {
-      x: 0,
-      rotate: -10,
-      transition: { duration: 1, type: 'tween' },
-    },
-  };
-
   const eventDate = '02/12/2022';
 
   const {
@@ -54,7 +43,7 @@ const RoseContainer = ({ weddData }: WeddData) => {
         nicknameMan={nickname_man}
       />
 
-      <div className="bg-[#FEF5ED] max-w-[640px] m-auto">
+      <div className="bg-base-100 max-w-[640px] m-auto">
         <div className={styles.container}>
           <main>
             <Opening />

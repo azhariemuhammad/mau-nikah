@@ -63,7 +63,7 @@ const WelcomePage = ({
           </div>
           <div className="mt-8">
             <button
-              className="rounded-full bg-olive text-white h-[40px] w-[170px]"
+              className="rounded-full bg-primary text-white h-[40px] w-[170px]"
               onClick={handleOpenInvitation}
             >
               Buka Undangan

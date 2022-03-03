@@ -1,17 +1,9 @@
 .loading__heart {
   fill: transparent;
-  stroke: rgb(159 18 57);
+  /* stroke: rgb(159 18 57); */
   stroke-width: 7;
   text-align: center;
   margin: 0 auto;
-}
-
-.loading__heart[data-variant='oceanblue'] {
-  stroke: #5388b7;
-}
-
-.loading__heart[data-variant='olive'] {
-  stroke: #99a799;
 }
 
 .loading__heart path {
