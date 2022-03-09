@@ -22,7 +22,7 @@ const EventDetail = (props: Event) => {
   return (
     <>
       <div className="py-1">
-        <h5 className="font-bold text-lime-800">{eventName}</h5>
+        <h5 className="font-bold text-secondary">{eventName}</h5>
         <p>{dayjs(eventDateStart).format('DD MMMM YYYY')}</p>
         <p>
           {dayjs(eventDateStart).format('HH:mm')} -{' '}
@@ -36,7 +36,7 @@ const EventDetail = (props: Event) => {
       <div className="my-4">
         <a
           href={pinPoint}
-          className="btn bg-olive rounded text-white font-bold py-2 px-4 mb-2 hover:bg-rose-700"
+          className="shadow-lg bg-primary rounded text-white font-bold py-2 px-4 mb-2 hover:bg-rose-700"
         >
           Lihat Lokasi
         </a>
