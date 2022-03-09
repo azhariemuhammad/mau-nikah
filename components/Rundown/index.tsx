@@ -57,7 +57,7 @@ const cardVariants: Variants = {
 const RundownComponent = ({ rundown }: RundownList) => {
   if (!rundown.length) return null;
   return (
-    <div id="schedule" className="text-center py-8">
+    <div id="schedule" className="text-center py-8 relative">
       <h3 className="text-4xl mb-2 text-slate-800 font-sacramento">Acara</h3>
       {rundown.map((item, key) => (
         <motion.div

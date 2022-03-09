@@ -3,7 +3,7 @@ interface Surah {
 }
 const Surah = ({ bgColor }: Surah) => {
   return (
-    <div className={`mx-[-30px] p-[2rem]  text-center bg-${bgColor}`}>
+    <div className={`mx-[-30px] p-[2rem] relative text-center bg-${bgColor}`}>
       <p className="pb-8 text-white text-sm">
         Dan di antara tanda-tanda kekuasaan-Nya lah Dia menciptakan untukmu
         istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa
