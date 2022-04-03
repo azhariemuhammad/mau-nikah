@@ -4,13 +4,13 @@ import WallOfLove from '.';
 import SendingLove from './SendingLove';
 import { Message } from '@/components/Containers/interface';
 import postLove from 'models/postLove';
-import { randomIntFromRange } from 'helpers/randomNumberRange';
+// import { randomIntFromRange } from 'helpers/randomNumberRange';
 import { useEffect, useRef, useState } from 'react';
 
 interface ContainerWallOfLoveProps {
   weddingId: number;
 }
-const variants = ['indigo-500', 'sky-500', 'purple-500'];
+// const variants = ['indigo-500', 'sky-500', 'purple-500'];
 
 const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
   const [curentPage, setCurrentPage] = useState(0);
@@ -27,7 +27,7 @@ const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
       setMessages(result);
       firstLoad.current = true;
     }
-  }, [result]);
+  }, [error, result]);
 
   const handleSendingLove = async (payload: Message) => {
     try {
@@ -44,7 +44,8 @@ const ContainerWallOfLove = ({ weddingId }: ContainerWallOfLoveProps) => {
       //   renderToast('Gagal menyimpan ide mu', true);
       // }
     } catch (e) {
-      console.error(e);
+      // do nothing
+      // console.error(e);
     }
   };
 

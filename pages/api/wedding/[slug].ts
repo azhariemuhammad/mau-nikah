@@ -1,5 +1,4 @@
 import nextConnect from 'next-connect';
-import { supabase } from '@/utils/supabaseClient';
 import getWeddingBySlug from 'models/getWeddings';
 
 const weddingApi = nextConnect()

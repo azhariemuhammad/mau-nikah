@@ -1,9 +1,10 @@
-import { ChangeEvent, ChangeEventHandler, useRef, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import styles from '@/styles/Home.module.css';
 import { Message } from '@/components/Containers/interface';
 
 interface SendingLoveProps {
   weddingId: number;
+  // eslint-disable-next-line no-unused-vars
   onsubmit: (item: Message) => void;
 }
 const SendingLove = ({ weddingId, onsubmit }: SendingLoveProps) => {

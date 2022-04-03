@@ -18,7 +18,7 @@ const WallOfLove = ({ message }: WallOfLoveProps) => {
         <div className={` ${styles.shadow__custom}`}>
           <div className="flex">
             <div
-              className={`rounded-full bg-sky-500 shadow-lg shadow-sky-500/50`}
+              className="rounded-full bg-sky-500 shadow-lg shadow-sky-500/50"
               style={{ width: '50px', height: '48px', padding: '15px' }}
             >
               <div

@@ -32,7 +32,6 @@ const OliveContainer = ({ weddData, isOpenModal }: WeddData) => {
     photos,
     nickname_women,
     nickname_man,
-    slug,
     audio_url,
     bride_main_banner,
     avatar_men,

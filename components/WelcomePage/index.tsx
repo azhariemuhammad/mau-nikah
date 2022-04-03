@@ -1,4 +1,3 @@
-import { capitalizeEachWord } from '@/utils/capitalizeEachWord';
 import { useRouter } from 'next/router';
 import { Meta } from '../Containers/interface';
 import MetaHeadComponent from '../MetaHead';

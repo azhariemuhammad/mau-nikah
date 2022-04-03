@@ -1,8 +1,3 @@
-import { useState } from 'react';
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import { motion, Variants } from 'framer-motion';
-
 import styles from '@/styles/Home.module.css';
 
 import CountdownTimer from '@/components/CountdownTimer';
