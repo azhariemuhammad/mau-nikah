@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import dayjs from 'dayjs';
 
 import { Rundown, WeddData } from '@/components/Containers/interface';
@@ -16,8 +15,6 @@ import { useMemo } from 'react';
 import { locale } from 'locale';
 import ContainerWallOfLove from '@/components/WallOfLove/Container';
 import Footer from '@/components/Footer';
-import TopInfo from '@/components/TopInfo';
-import PageImage from '@/public/images/page-image.png';
 
 dayjs.locale(locale as ILocale);
 
