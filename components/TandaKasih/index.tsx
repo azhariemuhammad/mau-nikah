@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import qrcode from '@/public/images/qrcode.jpeg';
 
 import styles from '@/styles/Home.module.css';
 
@@ -24,6 +23,7 @@ const TandaKasihComponent = () => {
             layout="fill"
             objectFit="cover"
             src="https://user-images.githubusercontent.com/19600009/154596055-b8160f2f-8547-444f-8c4e-ef0ccbef2f67.jpeg"
+            alt="image"
           />
         </div>
       </div>

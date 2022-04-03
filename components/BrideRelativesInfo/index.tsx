@@ -25,7 +25,7 @@ const BrideRelativesInfo = (props: BrideRelatives) => {
   );
 
   return (
-    <div className={`mx-[-30px] p-[2rem] text-center bg-${props.bgColor}`}>
+    <div className="mx-[-30px] p-[2rem] text-center relative">
       <div className="py-5">
         <h3 className="text-4xl mb-8 text-slate-800 font-sacramento">
           Turut Mengundang

@@ -29,7 +29,6 @@ const OliveContainer = ({ weddData, isOpenModal }: WeddData) => {
     photos,
     nickname_women,
     nickname_man,
-    slug,
     audio_url,
     bride_main_banner,
     avatar_men,
@@ -114,7 +113,7 @@ const OliveContainer = ({ weddData, isOpenModal }: WeddData) => {
             womenRelative={weddData.women_relatives}
             bgColor="white"
           />
-          <div className="my-[40px]">
+          <div className="my-[40px] relative">
             <Gallery photos={photos} />
           </div>
           <div className="my-[40px]">

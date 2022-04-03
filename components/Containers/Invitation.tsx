@@ -20,7 +20,7 @@ const Invitation = ({ weddData }: WeddData) => {
 
   useEffect(() => {
     AOS.init();
-  }, [AOS]);
+  }, []);
 
   const curentTheme = theme === 'pistachio' ? 'olive' : 'rose';
 

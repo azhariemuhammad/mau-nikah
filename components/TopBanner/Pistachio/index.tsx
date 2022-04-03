@@ -14,16 +14,14 @@ const TopBannerPistachio = ({
 }: TopBannerProps) => {
   return (
     <>
-      <div className="bg-red">
-        <div style={{ width: '100%', height: '475px', position: 'relative' }}>
-          <Image
-            alt="Mountains"
-            src={mainBanner}
-            layout="fill"
-            objectFit="cover"
-          />
-          {isOpenModal && <AudioPlayer audioUrl={audioUrl} />}
-        </div>
+      <div className="relative z-10 w-full h-[475px]">
+        <Image
+          alt="Mountains"
+          src={mainBanner}
+          layout="fill"
+          objectFit="cover"
+        />
+        {isOpenModal && <AudioPlayer audioUrl={audioUrl} />}
       </div>
     </>
   );

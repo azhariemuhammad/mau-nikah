@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import 'aos/dist/aos.css';
 
 import getWeddingBySlug from 'models/getWeddings';
@@ -19,7 +18,6 @@ interface InvitationResponse {
   };
 }
 const InvitationPage = ({ response }: InvitationResponse) => {
-  const router = useRouter();
   const { data = [] } = response || {};
 
   if (!data.length) {

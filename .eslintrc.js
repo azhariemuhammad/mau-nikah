@@ -12,7 +12,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
   ],
   rules: {
-    'no-unused-vars': 'off',
+    'no-unused-vars': 'error',
     'no-console': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',

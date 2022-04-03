@@ -39,6 +39,7 @@ const BrideInfo = (props: BrideInfo) => {
               height={150}
               layout="responsive"
               className="rounded-full shadow-md"
+              alt="avatar wanita"
             />
           </div>
         )}
@@ -66,6 +67,7 @@ const BrideInfo = (props: BrideInfo) => {
               height={150}
               layout="responsive"
               className="rounded-full shadow-md"
+              alt="avatar pria"
             />
           </div>
         )}
